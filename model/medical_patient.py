@@ -30,7 +30,7 @@ class medical_patient(models.Model):
             d1 = datetime.strptime(dt, "%Y-%m-%d").date()
             d2 = datetime.today()
             rd = relativedelta(d2, d1)
-            self.age = str(rd.years) + "y" +" "+ str(rd.months) + "m" +" "+ str(rd.days) + "d"
+            self.age = str(rd.years) + "a" +" "+ str(rd.months) + "m" +" "+ str(rd.days) + "d"
         else:
             self.age = "No hay fecha de Nacimiento!!"
 
@@ -45,7 +45,7 @@ class medical_patient(models.Model):
     blood_type = fields.Selection([('A', 'A'),('B', 'B'),('AB', 'AB'),('O', 'O')], string ="Tipo de sangre")
     rh = fields.Selection([('-+', '+'),('--', '-')], string ="Rh")
 #     medical_ethnicity_id = fields.Many2one('medical.ethnicity',string="Ethnic Group")
-    marital_status = fields.Selection([('s','Sotero'),('m','Casado'),('w','Widowed'),('d','Divorced'),('x','Seperated')],string='Estado marital')
+    marital_status = fields.Selection([('s','Soltero'),('m','Casado'),('w','Viudo'),('d','Divorciado'),('x','Separado')],string='Estado marital')
 #     family_code_id = fields.Many2one('medical.family_code',string="Family")
     deceased = fields.Boolean(string='Fallecido')
     date_of_death = fields.Datetime(string="Fecha de muerte")
@@ -58,8 +58,8 @@ class medical_patient(models.Model):
     patient_disease_ids = fields.One2many('medical.patient.disease','patient_id')
     patient_psc_ids = fields.One2many('medical.patient.psc','patient_id')
 #     evaluation_ids = fields.One2many('medical.patient.evaluation','medical_patient_id',string="Evalution")
-    excercise = fields.Boolean(string='Excercise')
-    excercise_minutes_day = fields.Integer(string="Minutes/Day")
+    excercise = fields.Boolean(string='Ejercios')
+    excercise_minutes_day = fields.Integer(string="Minutos/Dia")
     sleep_hours = fields.Integer(string="Hours of sleep")
     sleep_during_daytime = fields.Boolean(string="Sleep at daytime")
     number_of_meals = fields.Integer(string="Meals per day")
