@@ -64,7 +64,7 @@
                                 </group>
 
                                 <group colspan="4"
-                                    string="Patient Extra Information">
+                                    string="Informacion extra del paciente">
                                     <field colspan="4" name="general_info"
                                         nolabel="1" />
                                     <newline />

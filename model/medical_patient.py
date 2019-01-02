@@ -51,7 +51,7 @@ class medical_patient(models.Model):
     date_of_death = fields.Datetime(string="Fecha de muerte")
     cause_of_death = fields.Char(string='Cause de la muerte')
     receivable = fields.Float(string="Cuenta x cobrar", readonly=True)
-    current_insurance_id = fields.Many2one('medical.insurance',string="Insurance")
+    current_insurance_id = fields.Many2one('medical.insurance',string="Seguro")
     partner_address_id = fields.Many2one('res.partner', string="Direccion", )
     primary_care_physician_id = fields.Many2one('medical.physician', string="Medico Principal")
     patient_status = fields.Char(string="Estado de hospitalizacion",readonly=True)
@@ -60,22 +60,22 @@ class medical_patient(models.Model):
 #     evaluation_ids = fields.One2many('medical.patient.evaluation','medical_patient_id',string="Evalution")
     excercise = fields.Boolean(string='Ejercios')
     excercise_minutes_day = fields.Integer(string="Minutos/Dia")
-    sleep_hours = fields.Integer(string="Hours of sleep")
-    sleep_during_daytime = fields.Boolean(string="Sleep at daytime")
-    number_of_meals = fields.Integer(string="Meals per day")
-    coffee = fields.Boolean('Coffee')
-    coffee_cups = fields.Integer(string='Cups Per Day')
+    sleep_hours = fields.Integer(string="Horas de sueño")
+    sleep_during_daytime = fields.Boolean(string="Dormir durante el día")
+    number_of_meals = fields.Integer(string="Comidas por día")
+    coffee = fields.Boolean('Cafe')
+    coffee_cups = fields.Integer(string='Tazas por día')
     eats_alone = fields.Boolean(string="Eats alone")
     soft_drinks = fields.Boolean(string="Soft drinks(sugar)")
     salt = fields.Boolean(string="Salt")
     diet = fields.Boolean(string=" Currently on a diet ")
     diet_info = fields.Integer(string=' Diet info ')
     general_info = fields.Text(string="Info")
-    lifestyle_info = fields.Text('Lifestyle Information')
-    smoking = fields.Boolean(string="Smokes")
-    smoking_number = fields.Integer(string="Cigarretes a day")
-    ex_smoker = fields.Boolean(string="Ex-smoker")
-    second_hand_smoker = fields.Boolean(string="Passive smoker")
+    lifestyle_info = fields.Text('Información de estilo de vida')
+    smoking = fields.Boolean(string="Fumar")
+    smoking_number = fields.Integer(string="Cigarros por día")
+    ex_smoker = fields.Boolean(string="Ex-fumador")
+    second_hand_smoker = fields.Boolean(string="Fumador pasivo")
     age_start_smoking = fields.Integer(string="Age started to smoke")
     age_quit_smoking = fields.Integer(string="Age of quitting")
     drug_usage = fields.Boolean(string='Drug Habits')
@@ -92,16 +92,16 @@ class medical_patient(models.Model):
     alcohol_liquor_number = fields.Integer(string="Liquor / day")
     cage_ids = fields.One2many('medical.patient.cage','patient_id')
 #     drugs_ids = fields.Many2many('medical.drugs_recreational', string="Drugs")
-    sex_oral = fields.Selection([('0','None'),
-                                 ('1','Active'),
-                                 ('2','Passive'),
-                                 ('3','Both')],string='Oral Sex')
-    sex_anal = fields.Selection([('0','None'),
-                                 ('1','Active'),
-                                 ('2','Passive'),
-                                 ('3','Both')],string='Anal Sex')
-    prostitute = fields.Boolean(string='Prostitute')
-    sex_with_prostitutes = fields.Boolean(string=' Sex with prostitutes ')
+    sex_oral = fields.Selection([('0','Ninguno'),
+                                 ('1','Activo'),
+                                 ('2','Pasivo'),
+                                 ('3','Natural')],string='Sexo oral')
+    sex_anal = fields.Selection([('0','Ninguno'),
+                                 ('1','Activo'),
+                                 ('2','Pasivo'),
+                                 ('3','Natural')],string='Sexo anal')
+    prostitute = fields.Boolean(string='Prostituta')
+    sex_with_prostitutes = fields.Boolean(string=' Sexo con prostitutas ')
     sexual_preferences = fields.Selection([
             ('h', 'Heterosexual'),
             ('g', 'Homosexual'),
@@ -109,36 +109,36 @@ class medical_patient(models.Model):
             ('t', 'Transexual'),
         ], 'Sexual Orientation', sort=False)
     sexual_practices = fields.Selection([
-            ('s', 'Safe / Protected sex'),
-            ('r', 'Risky / Unprotected sex'),
-        ], 'Sexual Practices', sort=False)
+            ('s', 'Segura / Proteccion sex'),
+            ('r', 'Riesgosa / Sin proteccion sex'),
+        ], 'Practicas sexuales', sort=False)
     sexual_partners = fields.Selection([
-            ('m', 'Monogamous'),
-            ('t', 'Polygamous'),
-        ], 'Sexual Partners', sort=False)
-    sexual_partners_number = fields.Integer('Number of sexual partners')
-    first_sexual_encounter = fields.Integer('Age first sexual encounter')
+            ('m', 'Monogamo'),
+            ('t', 'Poligamo'),
+        ], 'Pareja sexual', sort=False)
+    sexual_partners_number = fields.Integer('Número de parejas sexuales')
+    first_sexual_encounter = fields.Integer('Edad de su primer relacion sexual')
     anticonceptive = fields.Selection([
-            ('0', 'None'),
-            ('1', 'Pill / Minipill'),
-            ('2', 'Male condom'),
-            ('3', 'Vasectomy'),
-            ('4', 'Female sterilisation'),
-            ('5', 'Intra-uterine device'),
-            ('6', 'Withdrawal method'),
-            ('7', 'Fertility cycle awareness'),
-            ('8', 'Contraceptive injection'),
-            ('9', 'Skin Patch'),
-            ('10', 'Female condom'),
-        ], 'Anticonceptive Method', sort=False)
+            ('0', 'Niguna'),
+            ('1', 'Pildora / Minipildora'),
+            ('2', 'Condon Masculino'),
+            ('3', 'Vasetomia'),
+            ('4', 'Estirilizacion femenina'),
+            ('5', 'Dispositivo intra-uterino'),
+            ('6', 'Metodo de retirada'),
+            ('7', 'Control de los dias'),
+            ('8', 'Inyeccion anticonseptiva'),
+            ('9', 'Parche de piel'),
+            ('10', 'Condon Femenino'),
+        ], 'Método anticonseptivo', sort=False)
     sexuality_info = fields.Text('Extra Information')
-    motorcycle_rider = fields.Boolean('Motorcycle Rider', help="The patient rides motorcycles")
-    helmet = fields.Boolean('Uses helmet', help="The patient uses the proper motorcycle helmet")
+    motorcycle_rider = fields.Boolean('Maneja moto', help="El paciente maneja moto")
+    helmet = fields.Boolean('Usa casco', help="El paciente usa el casco adecuado")
     traffic_laws = fields.Boolean('Obeys Traffic Laws', help="Check if the patient is a safe driver")
     car_revision = fields.Boolean('Car Revision', help="Maintain the vehicle. Do periodical checks - tires,breaks ...")
     car_seat_belt = fields.Boolean('Seat belt', help="Safety measures when driving : safety belt")
     car_child_safety = fields.Boolean('Car Child Safety', help="Safety measures when driving : child seats, proper seat belting, not seating on the front seat, ....")
-    home_safety = fields.Boolean('Home safety', help="Keep safety measures for kids in the kitchen, correct storage of chemicals, ...")
+    home_safety = fields.Boolean('Home safety', help="Keep safety measures for kids in the klitchen, correct storage of chemicals, ...")
     fertile = fields.Boolean('Fertile')
     menarche = fields.Integer('Menarche age')
     menopausal = fields.Boolean('Menopausal')
@@ -170,29 +170,29 @@ class medical_patient(models.Model):
     mammography_last = fields.Date('Last mammography')
     ses = fields.Selection([
             (None, ''),
-            ('0', 'Lower'),
-            ('1', 'Lower-middle'),
-            ('2', 'Middle'),
-            ('3', 'Middle-upper'),
-            ('4', 'Higher'),
-        ], 'Socioeconomics', help="SES - Socioeconomic Status", sort=False)
-    education = fields.Selection([('o','None'),('1','Incomplete Primary School'),
-                                  ('2','Primary School'),
-                                  ('3','Incomplete Secondary School'),
-                                  ('4','Secondary School'),
-                                  ('5','University')],string='Education Level')
+            ('0', 'Baja'),
+            ('1', 'Baja-media'),
+            ('2', 'Media'),
+            ('3', 'Media-alta'),
+            ('4', 'Alta'),
+        ], 'Clasesocial', help="CS - Clase social", sort=False)
+    education = fields.Selection([('o','Ninguno'),('1','Incompleta - estudios primarios'),
+                                  ('2','Escuela primaria'),
+                                  ('3','Incompleta - Escuela secundaria'),
+                                  ('4','Escuela secundaria'),
+                                  ('5','Universitario')],string='Nivel de educacion')
     housing = fields.Selection([
             (None, ''),
-            ('0', 'Shanty, deficient sanitary conditions'),
-            ('1', 'Small, crowded but with good sanitary conditions'),
-            ('2', 'Comfortable and good sanitary conditions'),
-            ('3', 'Roomy and excellent sanitary conditions'),
-            ('4', 'Luxury and excellent sanitary conditions'),
-        ], 'Housing conditions', help="Housing and sanitary living conditions", sort=False)
-    works = fields.Boolean('Works')
+            ('0', 'Choza, condicion sanitaria deficiente'),
+            ('1', 'Pequeña, apretado pero con buenas condiciones'),
+            ('2', 'Confortable y con buena condicion sanitaria'),
+            ('3', 'Excelente y condicion sanitarias buenas'),
+            ('4', 'Lujosa y Condiciones sanitarias excelentes'),
+        ], 'Condiciones de vivienda', help="Vivienda y Condiciones de vida sanitaria", sort=False)
+    works = fields.Boolean('Trabajo')
     hours_outside = fields.Integer('Hours outside home', help="Number of hours a day the patient spend outside the house")
     hostile_area = fields.Boolean('Hostile Area')
-    notes = fields.Text(string="Extra info")
+    notes = fields.Text(string="Iformacion extra")
     sewers = fields.Boolean('Sanitary Sewers')
     water = fields.Boolean('Running Water')
     trash = fields.Boolean('Trash recollection')
