@@ -60,36 +60,36 @@ class medical_patient(models.Model):
 #     evaluation_ids = fields.One2many('medical.patient.evaluation','medical_patient_id',string="Evalution")
     excercise = fields.Boolean(string='Ejercios')
     excercise_minutes_day = fields.Integer(string="Minutos/Dia")
-    sleep_hours = fields.Integer(string="Horas de sueño")
-    sleep_during_daytime = fields.Boolean(string="Dormir durante el día")
+    sleep_hours = fields.Integer(string="Horas que duerme")
+    sleep_during_daytime = fields.Boolean(string="Duerme durante el día")
     number_of_meals = fields.Integer(string="Comidas por día")
     coffee = fields.Boolean('Cafe')
     coffee_cups = fields.Integer(string='Tazas por día')
-    eats_alone = fields.Boolean(string="Eats alone")
-    soft_drinks = fields.Boolean(string="Soft drinks(sugar)")
-    salt = fields.Boolean(string="Salt")
-    diet = fields.Boolean(string=" Currently on a diet ")
-    diet_info = fields.Integer(string=' Diet info ')
+    eats_alone = fields.Boolean(string="Come solo")
+    soft_drinks = fields.Boolean(string="Bebidas sin alcohol (azúcar)")
+    salt = fields.Boolean(string="Sal")
+    diet = fields.Boolean(string=" Actualmente hace dieta ")
+    diet_info = fields.Integer(string=' Nro. dietas')
     general_info = fields.Text(string="Info")
     lifestyle_info = fields.Text('Información de estilo de vida')
-    smoking = fields.Boolean(string="Fumar")
+    smoking = fields.Boolean(string="Fumador")
     smoking_number = fields.Integer(string="Cigarros por día")
     ex_smoker = fields.Boolean(string="Ex-fumador")
     second_hand_smoker = fields.Boolean(string="Fumador pasivo")
-    age_start_smoking = fields.Integer(string="Age started to smoke")
-    age_quit_smoking = fields.Integer(string="Age of quitting")
-    drug_usage = fields.Boolean(string='Drug Habits')
-    drug_iv = fields.Boolean(string='IV drug user')
-    ex_drug_addict = fields.Boolean(string='Ex drug addict')
-    age_start_drugs = fields.Integer(string='Age started drugs')
-    age_quit_drugs = fields.Integer(string="Age quit drugs")
-    alcohol = fields.Boolean(string="Drinks Alcohol")
-    ex_alcohol = fields.Boolean(string="Ex alcoholic")
-    age_start_drinking = fields.Integer(string="Age started to drink")
-    age_quit_drinking = fields.Integer(string="Age quit drinking")
-    alcohol_beer_number = fields.Integer(string="Beer / day")
-    alcohol_wine_number = fields.Integer(string="Wine / day")
-    alcohol_liquor_number = fields.Integer(string="Liquor / day")
+    age_start_smoking = fields.Integer(string="Edad que empezo a fumar")
+    age_quit_smoking = fields.Integer(string="Edad en que dejo de fumar")
+    drug_usage = fields.Boolean(string='Consume drogas')
+    drug_iv = fields.Boolean(string='Consume drogas IV')
+    ex_drug_addict = fields.Boolean(string='Ex drogadicto')
+    age_start_drugs = fields.Integer(string='Edad que empezo a consumir drogas')
+    age_quit_drugs = fields.Integer(string="Edad en la que dejo de usar drogas")
+    alcohol = fields.Boolean(string="Toma alcohol")
+    ex_alcohol = fields.Boolean(string="Ex alcoholico")
+    age_start_drinking = fields.Integer(string="Edad en la que empezo a consumir alcohol")
+    age_quit_drinking = fields.Integer(string="Edad en que dejo de consumir alcohol")
+    alcohol_beer_number = fields.Integer(string="Cerveza / semana")
+    alcohol_wine_number = fields.Integer(string="Vino / semana")
+    alcohol_liquor_number = fields.Integer(string="Licor / semana")
     cage_ids = fields.One2many('medical.patient.cage','patient_id')
 #     drugs_ids = fields.Many2many('medical.drugs_recreational', string="Drugs")
     sex_oral = fields.Selection([('0','Ninguno'),
@@ -134,40 +134,40 @@ class medical_patient(models.Model):
     sexuality_info = fields.Text('Extra Information')
     motorcycle_rider = fields.Boolean('Maneja moto', help="El paciente maneja moto")
     helmet = fields.Boolean('Usa casco', help="El paciente usa el casco adecuado")
-    traffic_laws = fields.Boolean('Obeys Traffic Laws', help="Check if the patient is a safe driver")
-    car_revision = fields.Boolean('Car Revision', help="Maintain the vehicle. Do periodical checks - tires,breaks ...")
-    car_seat_belt = fields.Boolean('Seat belt', help="Safety measures when driving : safety belt")
-    car_child_safety = fields.Boolean('Car Child Safety', help="Safety measures when driving : child seats, proper seat belting, not seating on the front seat, ....")
-    home_safety = fields.Boolean('Home safety', help="Keep safety measures for kids in the klitchen, correct storage of chemicals, ...")
-    fertile = fields.Boolean('Fertile')
+    traffic_laws = fields.Boolean('Maneja seguro', help="Es el paciente un conductor seguro")
+    car_revision = fields.Boolean('Revision del auto', help="Mantto. vehiculo. Hace un mantenimiento periodico.")
+    car_seat_belt = fields.Boolean('Cinturon de seguridad', help="Usa cinturon de seguridad")
+    car_child_safety = fields.Boolean('Seguridad para niños', help="El auto tiene medidas de seguridad para niños : asiento para niños, ect....")
+    home_safety = fields.Boolean('Seguridad en el hogar', help="Toma medidas de seguridad para los niños en el hogar, lugar correcto para medicamentos, Etc..")
+    fertile = fields.Boolean('Fertil')
     menarche = fields.Integer('Menarche age')
-    menopausal = fields.Boolean('Menopausal')
-    menopause = fields.Integer('Menopause age')
+    menopausal = fields.Boolean('Menopausica')
+    menopause = fields.Integer('Edad menopausica')
     menstrual_history_ids = fields.One2many('medical.patient.menstrual.history','patient_id')
-    breast_self_examination = fields.Boolean('Breast self-examination')
-    mammography = fields.Boolean('Mammography')
-    pap_test = fields.Boolean('PAP test')
-    last_pap_test = fields.Date('Last PAP test')
-    colposcopy = fields.Boolean('Colposcopy')
+    breast_self_examination = fields.Boolean('Autoexamen semanal')
+    mammography = fields.Boolean('Mamografia')
+    pap_test = fields.Boolean('PAP Prueba')
+    last_pap_test = fields.Date('Utima prueba PAP')
+    colposcopy = fields.Boolean('Coloscopia')
     mammography_history_ids = fields.One2many('medical.patient.mammography.history','patient_id')
     pap_history_ids = fields.One2many('medical.patient.pap.history','patient_id')
     colposcopy_history_ids = fields.One2many('medical.patient.colposcopy.history','patient_id')
-    pregnancies = fields.Integer('Pregnancies')
-    premature = fields.Integer('Premature')
-    stillbirths = fields.Integer('Stillbirths')
-    abortions = fields.Integer('Abortions')
+    pregnancies = fields.Integer('Embarazos')
+    premature = fields.Integer('Prematuro')
+    stillbirths = fields.Integer('Aborto')
+    abortions = fields.Integer('Aborto probocado')
     pregnancy_history_ids = fields.One2many('medical.patient.pregnency','patient_id')
 #     genetic_risks_ids = fields.Many2many('medical.genetic.risk',string="Genetic Risks")
-    family_history_ids = fields.Many2many('medical.family.disease',string="Family Disease Lines")
+    family_history_ids = fields.Many2many('medical.family.disease',string="Enfermedades Familiares")
     perinatal_ids = fields.Many2many('medical.preinatal')
-    ex_alcoholic = fields.Boolean('Ex alcoholic')
-    currently_pregnant = fields.Boolean('Currently Pregnant')
+    ex_alcoholic = fields.Boolean('Ex alcoholico')
+    currently_pregnant = fields.Boolean('Actualmente embarazada')
 #     surgery_ids = fields.One2many('medical.surgery','patient_id')
-    born_alive = fields.Integer('Born Alive')
+    born_alive = fields.Integer('Nacidos vivos')
     gpa = fields.Char('GPA')
-    works_at_home = fields.Boolean('Works At Home')
-    colposcopy_last = fields.Date('Last colposcopy')
-    mammography_last = fields.Date('Last mammography')
+    works_at_home = fields.Boolean('Trabaja en casa')
+    colposcopy_last = fields.Date('Última colposcopia')
+    mammography_last = fields.Date('Ultima mamografia')
     ses = fields.Selection([
             (None, ''),
             ('0', 'Baja'),
@@ -190,82 +190,82 @@ class medical_patient(models.Model):
             ('4', 'Lujosa y Condiciones sanitarias excelentes'),
         ], 'Condiciones de vivienda', help="Vivienda y Condiciones de vida sanitaria", sort=False)
     works = fields.Boolean('Trabajo')
-    hours_outside = fields.Integer('Hours outside home', help="Number of hours a day the patient spend outside the house")
-    hostile_area = fields.Boolean('Hostile Area')
+    hours_outside = fields.Integer('Horas fuera de casa', help="Numero de horas que el paciente esta fuera de casa")
+    hostile_area = fields.Boolean('Horario hostil')
     notes = fields.Text(string="Iformacion extra")
-    sewers = fields.Boolean('Sanitary Sewers')
-    water = fields.Boolean('Running Water')
-    trash = fields.Boolean('Trash recollection')
-    electricity = fields.Boolean('Electrical supply')
-    gas = fields.Boolean('Gas supply')
-    telephone = fields.Boolean('Telephone')
+    sewers = fields.Boolean('Alcantarillas sanitarias')
+    water = fields.Boolean('Aguas sobrantes')
+    trash = fields.Boolean('Basureros')
+    electricity = fields.Boolean('Suministro electrico')
+    gas = fields.Boolean('Gas domiciliario')
+    telephone = fields.Boolean('Telefono')
     television = fields.Boolean('Television')
     internet = fields.Boolean('Internet')
-    single_parent= fields.Boolean('Single parent family')
-    domestic_violence = fields.Boolean('Domestic violence')
-    working_children = fields.Boolean('Working children')
-    teenage_pregnancy = fields.Boolean('Teenage pregnancy')
-    sexual_abuse = fields.Boolean('Sexual abuse')
-    drug_addiction = fields.Boolean('Drug addiction')
-    school_withdrawal = fields.Boolean('School withdrawal')
-    prison_past = fields.Boolean('Has been in prison')
-    prison_current = fields.Boolean('Is currently in prison')
-    relative_in_prison = fields.Boolean('Relative in prison', help="Check if someone from the nuclear family - parents sibblings  is or has been in prison")
+    single_parent= fields.Boolean('Familia monoparental')
+    domestic_violence = fields.Boolean('Violencia domestica')
+    working_children = fields.Boolean('Trabajo en niño')
+    teenage_pregnancy = fields.Boolean('Embarazo en la adolecencia ')
+    sexual_abuse = fields.Boolean('Abuso sexual')
+    drug_addiction = fields.Boolean('Addcion a las drogas')
+    school_withdrawal = fields.Boolean('Dejo la escuela')
+    prison_past = fields.Boolean('Ha estado en la cárcel')
+    prison_current = fields.Boolean('Esta Actualmente en prison')
+    relative_in_prison = fields.Boolean('Libertad condicional', help="Esta en libertad condicional")
     fam_apgar_help = fields.Selection([
             (None, ''),
-            ('0', 'None'),
-            ('1', 'Moderately'),
-            ('2', 'Very much'),
-        ], 'Help from family',
-            help="Is the patient satisfied with the level of help coming from the family when there is a problem ?", sort=False)
+            ('0', 'Ninguno'),
+            ('1', 'Moderado'),
+            ('2', 'Muy bien'),
+        ], 'Ayuda de la Familia',
+            help="Esta el paciente satisfecho con la ayuda que recibe de su familia ?", sort=False)
     fam_apgar_discussion = fields.Selection([
             (None, ''),
-            ('0', 'None'),
-            ('1', 'Moderately'),
-            ('2', 'Very much'),
-        ], 'Problems discussion',
-            help="Is the patient satisfied with the level talking over the problems as family ?", sort=False)
+            ('0', 'Ninguna'),
+            ('1', 'Moderado'),
+            ('2', 'Muy bien'),
+        ], 'Discucion problemas',
+            help="¿Está el paciente satisfecho con el nivel de problemas que tiene su familia ?", sort=False)
     fam_apgar_decisions = fields.Selection([
             (None, ''),
-            ('0', 'None'),
-            ('1', 'Moderately'),
-            ('2', 'Very much'),
-        ], 'Decision making',
-            help="Is the patient satisfied with the level of making important decisions as a group ?", sort=False)
+            ('0', 'Ninguna'),
+            ('1', 'Moderado'),
+            ('2', 'Muy bien'),
+        ], 'Toma de desiciones',
+            help="Esta el paciente satisfecho con su nivel de toma de desciones en su grupo/familia ?", sort=False)
     fam_apgar_timesharing = fields.Selection([
             (None, ''),
-            ('0', 'None'),
-            ('1', 'Moderately'),
-            ('2', 'Very much'),
-        ], 'Time sharing',
-            help="Is the patient satisfied with the level of time that they spend together ?", sort=False)
+            ('0', 'Ninguna'),
+            ('1', 'Moderado'),
+            ('2', 'Muy bien'),
+        ], 'Tiempo compartido',
+            help="Esta el paciente satisfecho con el timpo quecomparte en familia ?", sort=False)
     fam_apgar_affection = fields.Selection([
             (None, ''),
-            ('0', 'None'),
-            ('1', 'Moderately'),
-            ('2', 'Very much'),
-        ], 'Family affection',
-            help="Is the patient satisfied with the level of affection coming from the family ?", sort=False)
-    fam_apgar_score = fields.Integer('Score', help="Total Family APGAR 7 - 10 : Functional Family 4 - 6  : Some level of disfunction \n"
-                                          "0 - 3  : Severe disfunctional family \n")
+            ('0', 'Ninguna'),
+            ('1', 'Moderado'),
+            ('2', 'Muy bien'),
+        ], 'Afecto de la familia',
+            help="¿Está el paciente satisfecho con el nivel de afecto que viene de la familia ?", sort=False)
+    fam_apgar_score = fields.Integer('Pujtaje', help="Total Famlia APGAR 7 - 10 : Famlia Funcional 4 - 6  : Nivel bajo de disfunción \n"
+                                          "0 - 3  : Familia disfuncional severa \n")
     lab_test_ids = fields.One2many('medical.patient.lab.test','patient_id')
-    fertile = fields.Boolean('Fertile')
-    menarche_age  = fields.Integer('Menarche age')
-    menopausal = fields.Boolean('Menopausal')
-    pap_test_last = fields.Date('Last PAP Test')
-    colposcopy = fields.Boolean('Colpscopy')
-    gravida = fields.Integer('Pregnancies')
+    fertile = fields.Boolean('Fertilidad')
+    menarche_age  = fields.Integer('Edad menopausica')
+    menopausal = fields.Boolean('Menopausica')
+    pap_test_last = fields.Date('Ultimo test PAP')
+    colposcopy = fields.Boolean('Coloscopia')
+    gravida = fields.Integer('Embarazos')
     medical_vaccination_ids = fields.One2many('medical.vaccination','medical_patient_vaccines_id')
-    medical_appointments_ids = fields.One2many('medical.appointment','patient_id',string='Appointments')
-    lastname = fields.Char('Last Name')
-    report_date = fields.Date('Date',default = fields.Datetime.now)
+    medical_appointments_ids = fields.One2many('medical.appointment','patient_id',string='Consultas')
+    lastname = fields.Char('Apellidos')
+    report_date = fields.Date('Fecha',default = fields.Datetime.now)
     medication_ids = fields.One2many('medical.patient.medication1','medical_patient_medication_id')
     #medications = fields.One2many('medical.patient.medication','medical_patient_medication_id',string='Medication')
-    deaths_2nd_week = fields.Integer('Deceased after 2nd week')
-    deaths_1st_week = fields.Integer('Deceased after 1st week')
-    full_term = fields.Integer('Full Term')
+    deaths_2nd_week = fields.Integer('Fallecido después de la 2da. semana')
+    deaths_1st_week = fields.Integer('Fallecido después de la 1ra. semana')
+    full_term = fields.Integer('Termino')
 #     occupation_id = fields.Many2one('medical.occupation','Occupation')
-    ses_notes = fields.Text('Notes')
+    ses_notes = fields.Text('Notas')
 
     @api.model
     def create(self,val):

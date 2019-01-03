@@ -18,13 +18,13 @@ class medical_appointment(models.Model):
             ('ambulatory', 'Ambulatorio'),
             ('outpatient', 'Paciente externo'),
             ('inpatient', 'Paciente interno'),
-        ], 'Estado del paciente', sort=False,default='Externo')
+        ], 'Estado del paciente', sort=False,default='outpatient')
     patient_id = fields.Many2one('medical.patient','Paciente',required=True)
     urgency_level = fields.Selection([
             ('a', 'Normal'),
             ('b', 'Urgente'),
             ('c', 'Emergencia medica'),
-        ], 'Nivel de urgencia', sort=False,default="b")
+        ], 'Nivel de urgencia', sort=False,default="a")
     appointment_date = fields.Datetime('Fecha de consulta',required=True,default = fields.Datetime.now)
     appointment_end = fields.Datetime('Fecha fin consulta',required=True)
     doctor_id = fields.Many2one('medical.physician','Médico',required=True)
@@ -33,11 +33,11 @@ class medical_appointment(models.Model):
     validity_status = fields.Selection([
             ('invoice', 'Facturado'),
             ('tobe', 'Por facturar'),
-        ], 'Estado', sort=False,readonly=True,default='por facturar')
+        ], 'Estado', sort=False,readonly=True,default='tobe')
     appointment_validity_date = fields.Datetime('Fecha de validación')
     consultations_id = fields.Many2one('product.product','Servicio de consulta',required=True)
     comments = fields.Text(string="Info")
-    state = fields.Selection([('draft','Borrador'),('confirmed','Confirmada'),('cancel','Anulada'),('done','Hecha')],string="Estado",default='Borrador')
+    state = fields.Selection([('draft','Borrador'),('confirmed','Confirmada'),('cancel','Anulada'),('done','Hecha')],string="Estado",default='draft')
     invoice_to_insurer = fields.Boolean('Factura por seguro')
     medical_patient_psc_ids = fields.Many2many('medical.patient.psc',string='Lista de síntomas de pediatría')
     medical_prescription_order_ids = fields.One2many('medical.prescription.order','appointment_id',string='Prescripcion')

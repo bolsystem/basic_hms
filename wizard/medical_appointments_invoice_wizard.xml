@@ -26,7 +26,7 @@
         </record>
 
         <record id="action_medical_appointments_invoice_wizard" model="ir.actions.act_window">
-            <field name="name">Create Invoice</field>
+            <field name="name">Crear factura</field>
             <field name="res_model">medical.appointments.invoice.wizard</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>

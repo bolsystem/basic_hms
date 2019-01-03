@@ -16,7 +16,7 @@
             id="report_print_appointment"
             model="medical.appointment"
             report_type="qweb-pdf"
-            string="Appointment Recipts New"
+            string="Imprimir Consulta"
             name="basic_hms.appointment_recipts_report"
             file="basic_hms.appointment_recipts_report"
             />
@@ -26,7 +26,7 @@
             id="report_print_patient_card"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Patient Card"
+            string="Tarjeta de Paciente"
             name="basic_hms.report_patient_card"
             file="basic_hms.report_patient_card"
             />
@@ -44,7 +44,7 @@
             id="report_print_patient_medications_document"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Medication History New"
+            string="Historia Medica"
             name="basic_hms.patient_medications_document"
             file="basic_hms.patient_medications_document"
             />
@@ -52,7 +52,7 @@
             id="report_print_patient_vaccinations_document"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Vaccinations History New"
+            string="Historial de vacunacion"
             name="basic_hms.patient_vaccinations"
             file="basic_hms.patient_vaccinations"
             />
@@ -60,7 +60,7 @@
             id="report_print_patient_diseases_document"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Diseases Report New"
+            string="Reporte de enfermedades"
             name="basic_hms.patient_diseases_document"
             file="basic_hms.patient_diseases_document"
             />
@@ -68,7 +68,7 @@
             id="report_print_lab_result_demo"
             model="medical.lab"
             report_type="qweb-pdf"
-            string="Lab Record"
+            string="Registro de Laboratorio"
             name="basic_hms.lab_result_demo"
             file="basic_hms.lab_result_demo"
             />
@@ -76,7 +76,7 @@
             id="report_print_lab_test_demo"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Lab Test"
+            string="Prueba de laboratorio"
             name="basic_hms.lab_test_demo"
             file="basic_hms.lab_test_demo"
             />

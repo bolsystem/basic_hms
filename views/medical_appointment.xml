@@ -74,7 +74,7 @@
             <field name="name">medical.appointment.calendar.view</field>
             <field name="model">medical.appointment</field>
             <field name="arch" type="xml">
-                <calendar string="Appointments" color="doctor_id"
+                <calendar string="Consultas" color="doctor_id"
                     quick_add="False" date_start="appointment_date">
                     <field name="patient_id" />
                     <field name="doctor_id" />
@@ -86,7 +86,7 @@
             <field name="name">medical.appointment.tree.view</field>
             <field name="model">medical.appointment</field>
             <field name="arch" type="xml">
-                <tree string="Appointment Information">
+                <tree string="INFORMACION DE LA COSULTA">
                     <field name="name" />
                     <field name="patient_id" />
                     <field name="patient_status" />
@@ -101,7 +101,7 @@
         </record>
 
         <record id="action_medical_appointment" model="ir.actions.act_window">
-            <field name="name">Appointments</field>
+            <field name="name">Consultas</field>
             <field name="res_model">medical.appointment</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,calendar</field>
@@ -115,12 +115,12 @@
 <!--             <field name="domain">[('is_invoiced','=',False)]</field> -->
 <!--         </record> -->
 
-        <act_window id="action_view_appointment_id_new" name="Appointments"
+        <act_window id="action_view_appointment_id_new" name="Consultas"
             res_model="medical.appointment" src_model="medical.patient"
             view_mode="tree,form" domain="[('patient_id', '=', active_id)]" />
 
         <menuitem id="menu_medical_appointment" action="action_medical_appointment"
-            string="Appointments" parent="basic_hms.menu_appointment"
+            string="Consultas" parent="basic_hms.menu_appointment"
             sequence="1" />
 
 <!--         <menuitem id="app_to_invoice" -->

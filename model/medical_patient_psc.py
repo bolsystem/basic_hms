@@ -18,12 +18,12 @@ class medical_patient_psc(models.Model):
                        })
         return result
 
-    appointment_id = fields.Many2one('medical.appointment',"Appointment")
+    appointment_id = fields.Many2one('medical.appointment',"Consultas")
     patient_id = fields.Many2one('medical.patient','Patient', required = True) 
-    evaluation_start = fields.Datetime('Date ', required = True, default=fields.Datetime.now)
+    evaluation_start = fields.Datetime('Fecha ', required = True, default=fields.Datetime.now)
     psc_total = fields.Integer('PCS Total')
     user_id = fields.Many2one('res.users','Healh Professional', default=lambda self: self.env.user)
-    notes = fields.Text('Notes')
+    notes = fields.Text('Notas')
     #selection field 
     psc_aches_pains = fields.Selection([('0', 'Never'),('1', 'Sometimes'),('2', 'Often')], 'Complains of aches and pains')
     psc_absent_from_school = fields.Selection([('0', 'Never'),('1', 'Sometimes'),('2', 'Often')], 'Absent from school')

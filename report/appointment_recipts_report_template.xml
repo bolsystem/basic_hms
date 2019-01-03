@@ -12,7 +12,7 @@
 <br/>
                             <div class="row">
                                 <div>
-                                    <h3 class="text-center"><strong>APPOINTMENT INFORMATION</strong></h3>
+                                    <h3 class="text-center"><strong>INFOMACION DE CONSULTA</strong></h3>
                                 </div>
                             </div>
                             <br/><br/><br/><br/><br/>
@@ -22,7 +22,7 @@
                                     <tbody class="sale_tbody">
                                         <tr>
                                                 <td width="10%">
-                                                    <strong>Patient:</strong>
+                                                    <strong>Paciente:</strong>
                                                 </td>
 
                                                 <td width="5%" class="text-left">
@@ -33,7 +33,7 @@
                                                 </td>
 
                                                 <td width="10%">
-                                                   <strong>Appointment:</strong>
+                                                   <strong>Consulta:</strong>
                                                 </td>
 
                                                 <td width="10%" class="text-left">
@@ -43,7 +43,7 @@
 
                                           <tr>
                                                 <td width="10%">
-                                                    <strong>SSN:</strong>
+                                                    <strong>NSS:</strong>
                                                 </td>
 
                                                  <td width="5%">
@@ -54,7 +54,7 @@
                                                 </td>
 
                                                 <td width="10%">
-                                                 <strong> Date:</strong>
+                                                 <strong> Fecha:</strong>
                                                 </td>
 
                                                <td width="5%">
@@ -64,7 +64,7 @@
 
                                           <tr>
                                                 <td width="10%">
-                                                   <strong>Instructions / Notes :</strong>
+                                                   <strong>Intrucciones / Notas :</strong>
                                                 </td>
                                                  <td width="5%">
                                                     <span t-field="doc.comments"/>
@@ -116,7 +116,7 @@
 
                                                 </td>
                                                 <td width="10%">
-                                                <strong>Health Professional :   </strong>
+                                                <strong>Profesional Medico :   </strong>
                                                 </td>
                                                 <td width="5%">
                                                    <span t-field="doc.doctor_id.partner_id.name"/>

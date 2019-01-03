@@ -24,7 +24,7 @@
         </record>
 
         <record id="medical_health_service_code_sequence" model="ir.sequence">
-            <field name="name">Service</field>
+            <field name="name">Servicios</field>
             <field name="code">medical.health_service</field>
             <field name="prefix">SERV%(year)s/</field>
             <field name="padding">3</field>
@@ -45,14 +45,14 @@
         </record> -->
 
         <record id="patient_registration_sequence" model="ir.sequence">
-            <field name="name">Patient Seq</field>
+            <field name="name">Secuencia de paciente</field>
             <field name="code">medical.patient</field>
             <field name="prefix">PAC</field>
             <field name="padding">2</field>
         </record>
 
         <record id="prescription_order_sequence" model="ir.sequence">
-            <field name="name">Prescriptions</field>
+            <field name="name">Prescripcion</field>
             <field name="code">medical.prescription.order</field>
             <field name="prefix">PRES%(year)s/</field>
             <field name="padding">6</field>
@@ -60,28 +60,28 @@
         </record>
 
         <record id="medical_lab_test_sequence" model="ir.sequence">
-            <field name="name">Medical Lab Test</field>
+            <field name="name">Prueba de laboratorio medico</field>
             <field name="code">ltest_seq</field>
             <field name="prefix">TEST</field>
             <field name="padding">3</field>
         </record>
 
         <record id="lab_test_sequence" model="ir.sequence">
-            <field name="name">Lab Test</field>
+            <field name="name">Prueba de laboratorio</field>
             <field name="code">test_seq</field>
             <field name="prefix">LABT</field>
             <field name="padding">3</field>
         </record>
 
         <record id="new_born_sequence" model="ir.sequence">
-            <field name="name">New Born</field>
+            <field name="name">Recien Nacido</field>
             <field name="code">new_born_seq</field>
-            <field name="prefix">NEW</field>
+            <field name="prefix">NAC</field>
             <field name="padding">3</field>
         </record>
 
         <record id="medical_health_service_sequence" model="ir.sequence">
-            <field name="name">Medical Health Service</field>
+            <field name="name">Servicio de salud medico</field>
             <field name="code">medical_health_ser</field>
             <field name="prefix">MEDSR</field>
             <field name="padding">3</field>

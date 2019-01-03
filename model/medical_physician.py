@@ -11,4 +11,4 @@ class medical_physician(models.Model):
     institution_partner_id = fields.Many2one('res.partner',domain=[('is_institution','=',True)],string='Institution')
 #     speciality_id = fields.Many2one('medical.speciality','Speciality',required=True)
     code = fields.Char('Id')
-    info = fields.Text('Extra Info')
+    info = fields.Text('Info Extra')

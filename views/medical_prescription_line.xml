@@ -40,19 +40,19 @@
                         <field name="start_treatment" />
                         <field name="end_treatment" />
                     </group>
-                    <group colspan="4" string="Dosage">
+                    <group colspan="4" string="Dosificacion">
                         <group colspan="6" col="6">
                             <field name="dose" />
                             <field name="dose_unit_id" />
 
                             <field name="qty" />
                         </group>
-                        <separator string="Common Dosage" />
+                        <separator string="Dosificacion comun" />
                         <group colspan="4" col="4">
                             <field name="medication_dosage_id" />
                             <field name="admin_times" />
                         </group>
-                        <separator string="Specific Dosage" />
+                        <separator string="Dosis especifica" />
                         <group colspan="4" col="4">
                             <field name="frequency" />
                             <field name="frequency_unit" />

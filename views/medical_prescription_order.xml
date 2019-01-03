@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <act_window id="action_view_priscription_id2" name="Prescription Orders"
+        <act_window id="action_view_priscription_id2" name="Ordenes de prescripcion"
             res_model="medical.prescription.order" src_model="medical.patient"
             view_mode="tree" domain="[('patient_id', '=', active_id)]" />
 
@@ -16,7 +16,7 @@
             <field name="model">medical.prescription.order</field>
             <field name="priority">2</field>
             <field name="arch" type="xml">
-                <tree string="Prescription">
+                <tree string="Prescripcion">
                     <field name="name" />
                     <field name="patient_id" />
                     <field name="user_id" />
@@ -31,17 +31,17 @@
             <field name="name">medical.prescription.order.form.view</field>
             <field name="model">medical.prescription.order</field>
             <field name="arch" type="xml">
-                <form string="Prescription">
+                <form string="Prescripcion">
                     <header>
                         <button name="prescription_report" type="object"
-                            string="Print Prescription" class="oe_highlight" />
+                            string="Imprimir prescripcion" class="oe_highlight" />
                         <button
                             name="%(action_create_prescription_invoice1)d"
-                            type="action" string="Create Invoice" class="oe_highlight" />
+                            type="action" string="Crear factura" class="oe_highlight" />
 
                     </header>
                     <sheet>
-                        <group string="Patient and Doctor Information">
+                        <group string="Informacion del Doctor y el Paciente">
                             <group>
                                 <field name="patient_id" required="1"
                                     options="{&quot;always_reload&quot;: 1}" />
@@ -58,7 +58,7 @@
                                     attrs="{'invisible': [('invoice_to_insurer','=', False)]}" />
                             </group>
                         </group>
-                        <group string="Prescription Detail">
+                        <group string="Detalle de prescripcion">
                             <field name="prescription_line_ids"
                                 nolabel="1" widget="one2many_list" />
                         </group>
@@ -78,7 +78,7 @@
             <field name="type">search</field>
             <field name="priority" eval="8" />
             <field name="arch" type="xml">
-                <search string="Search Patient Prescriptions">
+                <search string="Buscar Prescripcion del paciente">
                     <separator orientation="vertical" />
                     <field name="name" />
                     <field name="patient_id" />
@@ -89,7 +89,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="action_medical_prescription_order">
-            <field name="name">Prescription Order</field>
+            <field name="name">Ordern de prescripcion </field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.prescription.order</field>
             <field name="view_type">form</field>
@@ -114,7 +114,7 @@
                         
 
         <menuitem id="dental_prescription_child" action="action_medical_prescription_order"
-            name="Prescriptions" parent="menu_patients" sequence="2" />
+            name="Prescripcion" parent="menu_patients" sequence="2" />
 
     </data>
 </odoo>

@@ -7,7 +7,7 @@
            
         <menuitem 
         	id="main_menu_hospital_management"
-        	name="Administration Centro Medico"
+        	name="Administrar Centro Medico"
             web_icon="basic_hms,static/index1.png"
            />
 
