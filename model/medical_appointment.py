@@ -12,19 +12,19 @@ class medical_appointment(models.Model):
 
     name = fields.Char(string="ID Consulta", readonly=True ,copy=True)
     is_invoiced = fields.Boolean(copy=False,default = False)
-    institution_partner_id = fields.Many2one('res.partner',domain=[('is_institution','=',True)],string="Health Center")
-    inpatient_registration_id = fields.Many2one('medical.inpatient.registration',string="Inpatient Registration")
+    institution_partner_id = fields.Many2one('res.partner',domain=[('is_institution','=',True)],string="Centro Médico")
+    inpatient_registration_id = fields.Many2one('medical.inpatient.registration',string="Registro de pacientes hospitalizados")
     patient_status = fields.Selection([
-            ('ambulatory', 'Ambulatory'),
-            ('outpatient', 'Outpatient'),
-            ('inpatient', 'Inpatient'),
-        ], 'Patient status', sort=False,default='outpatient')
+            ('ambulatory', 'Ambulatorio'),
+            ('outpatient', 'Paciente externo'),
+            ('inpatient', 'Paciente interno'),
+        ], 'Estado del paciente', sort=False,default='Externo')
     patient_id = fields.Many2one('medical.patient','Paciente',required=True)
     urgency_level = fields.Selection([
             ('a', 'Normal'),
-            ('b', 'Urgent'),
-            ('c', 'Medical Emergency'),
-        ], 'Urgency Level', sort=False,default="b")
+            ('b', 'Urgente'),
+            ('c', 'Emergencia medica'),
+        ], 'Nivel de urgencia', sort=False,default="b")
     appointment_date = fields.Datetime('Fecha de consulta',required=True,default = fields.Datetime.now)
     appointment_end = fields.Datetime('Fecha fin consulta',required=True)
     doctor_id = fields.Many2one('medical.physician','Médico',required=True)
@@ -33,15 +33,15 @@ class medical_appointment(models.Model):
     validity_status = fields.Selection([
             ('invoice', 'Facturado'),
             ('tobe', 'Por facturar'),
-        ], 'Status', sort=False,readonly=True,default='tobe')
-    appointment_validity_date = fields.Datetime('Validity Date')
-    consultations_id = fields.Many2one('product.product','Consultation Service',required=True)
+        ], 'Estado', sort=False,readonly=True,default='por facturar')
+    appointment_validity_date = fields.Datetime('Fecha de validación')
+    consultations_id = fields.Many2one('product.product','Servicio de consulta',required=True)
     comments = fields.Text(string="Info")
-    state = fields.Selection([('draft','Draft'),('confirmed','Confirm'),('cancel','Cancel'),('done','Done')],string="State",default='draft')
-    invoice_to_insurer = fields.Boolean('Invoice to Insurance')
-    medical_patient_psc_ids = fields.Many2many('medical.patient.psc',string='Pediatrics Symptoms Checklist')
-    medical_prescription_order_ids = fields.One2many('medical.prescription.order','appointment_id',string='Prescription')
-    insurer_id = fields.Many2one('medical.insurance','Insurer')
+    state = fields.Selection([('draft','Borrador'),('confirmed','Confirmada'),('cancel','Anulada'),('done','Hecha')],string="Estado",default='Borrador')
+    invoice_to_insurer = fields.Boolean('Factura por seguro')
+    medical_patient_psc_ids = fields.Many2many('medical.patient.psc',string='Lista de síntomas de pediatría')
+    medical_prescription_order_ids = fields.One2many('medical.prescription.order','appointment_id',string='Prescripcion')
+    insurer_id = fields.Many2one('medical.insurance','Asegurador')
     duration = fields.Integer('Duración')
     #owner_name = fields.Many2one('res.partner','Owner')
 
@@ -56,7 +56,7 @@ class medical_appointment(models.Model):
 
     @api.model
     def create(self, vals):
-        vals['name'] = self.env['ir.sequence'].next_by_code('medical.appointment') or 'APT'
+        vals['name'] = self.env['ir.sequence'].next_by_code('medical.appointment') or 'CON'
         msg_body = 'Consulta creada'
         self.message_post(body=msg_body)
         result = super(medical_appointment, self).create(vals)
@@ -106,7 +106,7 @@ class medical_appointment(models.Model):
 
     @api.multi
     def done(self):
-        self.write({'state': 'hecho'})
+        self.write({'state': 'hecha'})
 
     @api.multi
     def cancel(self):
@@ -162,7 +162,7 @@ class medical_appointment(models.Model):
                 if res:
                     result['domain'] = "[('id','=',%s)]" % res.id
         else:
-             raise UserError(_(' The Appointment is invoice exempt'))
+             raise UserError(_(' La consulta está exenta de facturas.'))
         return result
 
         
