@@ -5,7 +5,7 @@
             <field name="name">medical.pathology.category.form.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <form string="Disease categories">
+                <form string="Categorias de Enfermedades">
                     <group colspan="4" col="4">
                         <field name="name" />
                         <field name="active" />
@@ -19,7 +19,7 @@
             <field name="name">medical.pathology.category.tree.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <tree string="Disease Categories">
+                <tree string="Categorias de Enfermedades">
                     <field name="name" />
                 </tree>
             </field>
@@ -27,7 +27,7 @@
 
         <record id="action_medical_pathology_category_tree"
             model="ir.actions.act_window">
-            <field name="name">Disease categories Structure</field>
+            <field name="name">Estructura Categ/Enfermed.</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="view_type">tree</field>
@@ -36,17 +36,17 @@
 
         <record id="action_medical_pathology_category_form"
             model="ir.actions.act_window">
-            <field name="name">Disease categories</field>
+            <field name="name">Categoria Enfermedades</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="menu_diseases" name="Diseases"
+        <menuitem id="menu_diseases" name="Enfermedades"
             parent="main_menu_configartion" sequence='1' />
 
-        <menuitem id="menu_categories" name="Categories"
+        <menuitem id="menu_categories" name="Categorias"
             parent="menu_diseases" />
         <menuitem id="menu_categories_structure" action="action_medical_pathology_category_tree"
             sequence="1" parent="menu_categories" />

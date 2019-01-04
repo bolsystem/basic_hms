@@ -11,15 +11,15 @@ class medical_lab(models.Model):
     # _rec_name = 'test_id'
 
     name = fields.Char('ID')
-    test_id = fields.Many2one('medical.test_type', 'Test Type', required = True)
-    date_analysis =  fields.Datetime('Date of the Analysis' , default = datetime.now())
-    patient_id = fields.Many2one('medical.patient','Patient', required = True) 
-    date_requested = fields.Datetime('Date requested',  default = datetime.now())
-    medical_lab_physician_id = fields.Many2one('medical.physician','Pathologist')
-    requestor_physician_id = fields.Many2one('medical.physician','Physician', required = True)
-    critearea_ids = fields.One2many('medical_test.critearea','medical_lab_id', 'Critearea')
-    results= fields.Text('Results')
-    diagnosis = fields.Text('Diagnosis')
+    test_id = fields.Many2one('medical.test_type', 'Tipo de prueba', required = True)
+    date_analysis =  fields.Datetime('Fecha del analisis' , default = datetime.now())
+    patient_id = fields.Many2one('medical.patient','Paciente', required = True) 
+    date_requested = fields.Datetime('Fecha de requerimiento',  default = datetime.now())
+    medical_lab_physician_id = fields.Many2one('medical.physician','Patologia')
+    requestor_physician_id = fields.Many2one('medical.physician','Medico', required = True)
+    critearea_ids = fields.One2many('medical_test.critearea','medical_lab_id', 'Criterios')
+    results= fields.Text('Resultados')
+    diagnosis = fields.Text('Diganostico')
     
     
     @api.model

@@ -8,8 +8,8 @@ class medical_test_type(models.Model):
 
     _name  = 'medical.test_type'
 
-    name = fields.Char('Name', required = True)
-    code  =  fields.Char('Code' , required = True)
-    critearea_ids = fields.One2many('medical_test.critearea', 'test_id','Critearea')
-    service_product_id = fields.Many2one('product.product','Service' , required = True)
+    name = fields.Char('Nombre', required = True)
+    code  =  fields.Char('Codigo' , required = True)
+    critearea_ids = fields.One2many('medical_test.critearea', 'test_id','Criterios')
+    service_product_id = fields.Many2one('product.product','Servicio' , required = True)
     info  = fields.Text('Extra Information')

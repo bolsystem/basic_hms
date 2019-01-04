@@ -7,7 +7,7 @@ class medical_diagnostic_hypotesis(models.Model):
     _name = 'medical.diagnostic_hypotesis'
     _rec_name = 'diagnostic_pathology_id'
 
-    diagnostic_pathology_id = fields.Many2one('medical.pathology','Procedure')
-    patient_evaluation_id = fields.Many2one('medical.patient.evaluation','Patient Evaluation')
-    comments = fields.Char('Comments')
+    diagnostic_pathology_id = fields.Many2one('medical.pathology','Procedimiento')
+    patient_evaluation_id = fields.Many2one('medical.patient.evaluation','Evalicion de paciente')
+    comments = fields.Char('Comentario')
 

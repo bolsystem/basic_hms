@@ -24,7 +24,7 @@ class medical_lab_test_invoice(models.TransientModel):
             lab_req = lab_req_obj.browse(active_id)
             sale_journals = self.env['account.journal'].search([('type','=','sale')])
             invoice_vals = {
-            'name': "Customer Invoice",
+            'name': "Factura del cliente",
             'origin': lab_req.medical_test_type_id.name or '',
             'type': 'out_invoice',
             'reference': False,
@@ -36,7 +36,7 @@ class medical_lab_test_invoice(models.TransientModel):
             'payment_term_id': False,
             'fiscal_position_id': lab_req.patient_id.patient_id.property_account_position_id.id,
             'team_id': False,
-            'comment': "Invoice Created from Medical Appointment",
+            'comment': "Factura creade desde --Consultas Medicas--",
             'date_invoice': date.today(),
             'company_id':lab_req.patient_id.patient_id.company_id.id or False ,
                 }
@@ -49,7 +49,7 @@ class medical_lab_test_invoice(models.TransientModel):
                 inc_acc = ir_property_obj.get('property_account_income_categ_id', 'product.category')
             if not invoice_line_account_id:
                 raise UserError(
-                    _('There is no income account defined for this product: "%s". You may have to install a chart of account from Accounting app, settings menu.') %
+                    _('No hay una cuenta de ingresos definida para este producto.: "%s". Es posible que tenga que instalar un plan de cuenta desde la aplicación de contabilidad, menú de configuración.') %
                     (product.name,))
         
             tax_ids = []

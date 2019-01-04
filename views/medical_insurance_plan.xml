@@ -7,7 +7,7 @@
             <field name="model">medical.insurance.plan</field>
             <field name="priority">2</field>
             <field name="arch" type="xml">
-                <tree string="Insurance Plans">
+                <tree string="Plan de seguros">
                     <field name="insurance_product_id" />
                     <field name="is_default" />
                 </tree>
@@ -18,7 +18,7 @@
             <field name="name">medical.insurance.plan.form.view</field>
             <field name="model">medical.insurance.plan</field>
             <field name="arch" type="xml">
-                <form string="Insurance Plans">
+                <form string="Plan de seguro">
                     <group colspan="4" col="4">
                         <field name="insurance_product_id" required = "1"
                             context="{'search_default_type': 'service','default_type': 'service'}" />

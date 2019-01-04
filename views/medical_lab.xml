@@ -11,6 +11,9 @@
                     <field name="test_id" />
                     <field name="patient_id" />
                     <field name="date_analysis" />
+                    <field name="medical_lab_physician_id" />
+                    <field name="results" />
+                    <field name="diagnosis" />
                 </tree>
             </field>
         </record>
@@ -21,9 +24,9 @@
             <field name="name">medical.lab.form.view</field>
             <field name="model">medical.lab</field>
             <field name="arch" type="xml">
-                <form string="Laboratory Test">
+                <form string="Prueba de laboratorio">
                     <sheet>
-                        <group string="Main Info">
+                        <group string="Informacion principal">
                             <group>
                                 <field name="name" required="1" />
                                 <field name="date_analysis" />
@@ -37,7 +40,7 @@
                                 <field name="date_requested" />
                             </group>
                         </group>
-                        <group string="Total Cases">
+                        <group string="Casos totales">
                             <field name="critearea_ids" colspan="4"
                                 nolabel="1">
                                 <tree editable="top" string="Test Cases">
@@ -47,7 +50,7 @@
                                     <field name="normal_range" />
                                     <field name="lab_test_unit_id" />
                                 </tree>
-                                <form string="Test Cases">
+                                <form string="Casos de prueba">
 
                                     <field name="name" />
                                     <field name="seq" />
@@ -57,7 +60,7 @@
                                 </form>
                             </field>
                         </group>
-                        <group string="Extra Info">
+                        <group string="Informacion extra">
                             <field name="results" />
                             <field name="diagnosis" />
                         </group>
@@ -68,7 +71,7 @@
         </record>
 
         <record id="action_medical_lab_form" model="ir.actions.act_window">
-            <field name="name">Lab Tests Results</field>
+            <field name="name">Resultados de pruebas de laboratario</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.lab</field>
             <field name="view_type">form</field>
@@ -76,18 +79,18 @@
         </record>
 
         <record id="action_medical_lab_tree" model="ir.actions.act_window">
-            <field name="name">Lab Tests Results</field>
+            <field name="name">Resul/Pruebas de Laboratorio</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.lab</field>
             <field name="view_type">tree</field>
             <field name="view_mode">tree</field>
         </record>
 
-        <act_window id="action_view_lab_id" name="Lab Reports"
+        <act_window id="action_view_lab_id" name="Reportes de laboratario"
             res_model="medical.lab" src_model="medical.patient"
             view_mode="tree,form" domain="[('patient_id', '=', active_id)]" />
 
-        <menuitem name="Lab Tests Results" id="menu_lab_test_result"
+        <menuitem name="Resul/Pruebas Laboratorio" id="menu_lab_test_result"
             parent="basic_hms.main_menu_laboratory" action="action_medical_lab_form"
             sequence="0" />
 

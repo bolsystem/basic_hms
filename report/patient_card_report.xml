@@ -20,29 +20,29 @@
 											<div
 												style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size:16px">
 												<b>
-													Patient ID:
+													ID Paciente:
 													<span t-field='o.name' />
 												</b>
 												<br></br>
-												<b>Title:</b>
+												<b>Titulo:</b>
 												<span t-field='o.patient_id.title' />
 												<br></br>
-												<b>Name:</b>
+												<b>Nombre:</b>
 												<span t-field='o.patient_id.name' />
 												<br></br>
-												<b>Gender :</b>
+												<b>Genero :</b>
 												<span t-field='o.sex' />
 												<br></br>
-												<b>Date of Birth :</b>
+												<b>Fecha de Nac. :</b>
 												<span t-field='o.date_of_birth' />
 												<br></br>
-												<b>Age:</b>
+												<b>Edad:</b>
 												<span t-field='o.age' />
 												<br></br>
-												<b>Blood Group:</b>
+												<b>Grupo de sangre:</b>
 												<span t-field='o.blood_type' />
 												<br></br>
-												<b>Address:</b>
+												<b>Direccion:</b>
 												<span
 													t-raw="'%s' % o.patient_id.street if  o.patient_id.street  else ''" />
 												<span
@@ -52,7 +52,7 @@
 												<span
 													t-raw="'%s' %  o.patient_id.state_id.name if  o.patient_id.state_id.name  else ''" />
 												<br></br>
-												<b>Phone No:</b>
+												<b>Nro. Telefono:</b>
 												<span t-field='o.patient_id.mobile' />
 												<br></br>
 											</div>

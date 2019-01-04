@@ -7,18 +7,18 @@
             <field name="name">Create Prescription Shipment</field>
             <field name="model">create.prescription.shipment</field>
             <field name="arch" type="xml">
-                <form string="Create prescription invoices">
+                <form string="Crear facturas de recetas">
                     <separator 
-                        string="Do you want to create the prescription Shipment ?" />
+                        string="¿Quieres crear el envío de la receta? ?" />
                     <newline />
                     <separator string="                  "
                          />
                      <footer>
                     <button name="create_prescription_shipment"
-                        class="oe_highlight" string="Create Prescription Shipment"
+                        class="oe_highlight" string="Crear envío de prescripción"
                         type="object" />
                         or
-                    <button special="cancel" string="Cancel" class="oe_highlight" />
+                    <button special="cancel" string="Anular" class="oe_highlight" />
                     </footer>
                 </form>
 
@@ -26,7 +26,7 @@
         </record>
 
         <act_window id="action_create_prescription_shipment1"
-            name="Create Prescription Shipment" res_model="create.prescription.shipment"
+            name="Crear envio de prescripción" res_model="create.prescription.shipment"
             src_model="medical.prescription.order" view_mode="form"
             target="new" />
 

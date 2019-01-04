@@ -181,6 +181,7 @@
                                     </page>
                                 </notebook>
                             </page>
+                            <!--
                             <page string="Ginecologia / Obs"
                                 attrs="{'invisible':[('sex','=','m')]}">
                                 <group string="Gyneco">
@@ -225,6 +226,7 @@
                                     </group>
                                 </group>
                             </page>
+                             -->
 
                             <page string="Estilo de Vida">
                                 <notebook>

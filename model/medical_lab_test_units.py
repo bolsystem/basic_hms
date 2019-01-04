@@ -8,8 +8,8 @@ class medical_lab_test_units(models.Model):
 
     _name = 'medical.lab.test.units'
     
-    name = fields.Char('Name', required = True)
-    code  =  fields.Char('Code')
+    name = fields.Char('Nombre', required = True)
+    code  =  fields.Char('Codigo')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:    

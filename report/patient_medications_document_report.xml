@@ -10,7 +10,7 @@
 						<div class="row mt32 mb32">
 							<div>
 								<h3 class="text-center">
-									<strong>PATIENT MEDICATION HISTORY</strong>
+									<strong>HISTORIA MEDICA DEL PACIENTE</strong>
 								</h3>
 							</div>
 						</div>
@@ -20,30 +20,30 @@
 						<div class="row">
 							 <div class="col-xs-4">
                             	<div>
-                            		<strong>Patient:</strong>
+                            		<strong>Paciente:</strong>
                             		<span t-field="doc.patient_id.name"/>
                             	</div>
                             	<br/>
                             	<div>
-                            		<strong>Date:</strong>
+                            		<strong>Fecha:</strong>
                                 	<span t-field="doc.report_date"/>
                                 </div>
                             </div>
                             <div class="col-xs-4">
                             	<div>
-                            		<strong>Patient ID :</strong>
+                            		<strong>ID Paciente :</strong>
                             		<span t-field="doc.name"/>
                             	</div>
                             	<br/>
                             	<div>
-                            		<strong>Age:</strong>
+                            		<strong>Edad:</strong>
                                 	<span t-field="doc.age"/>
                                 </div>
                             </div>
 							<div class="col-xs-4">
 								<div/>
 								<div>
-									<strong>Sex:</strong>
+									<strong>Sexo:</strong>
 									<span t-field="doc.sex"/>
 								</div>
 							</div>
@@ -53,11 +53,11 @@
 						<table class="table table-condensed">
 							<thead>
 								<tr>
-									<th>Medicament</th>
-									<th>Indication</th>
-									<th>Start</th>
-									<th>End</th>
-									<th>Act</th>
+									<th>Medicamento</th>
+									<th>Indicacion</th>
+									<th>Incio</th>
+									<th>Fin</th>
+									<th>Actividad</th>
 									<th>Doctor</th>
 								</tr>
 							</thead>

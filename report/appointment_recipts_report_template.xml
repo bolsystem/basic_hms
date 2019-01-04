@@ -73,7 +73,7 @@
                                                 <td width="10%">
                                                 </td>
                                                 <td width="10%">
-                                                 <strong> Institution :   </strong>
+                                                 <strong> Insitucion :   </strong>
                                                 </td>
                                                 <td width="5%">
                                                     <span t-field="doc.institution_partner_id.name"/>

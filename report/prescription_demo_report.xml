@@ -11,25 +11,25 @@
 <br/>
 							<div class="row">
 							<h3 class="text-center mb32">
-								<strong>PRESCRIPTION REPORT</strong>
+								<strong>REPORTE DE PRESCRIPCION</strong>
 							</h3>
 					</div>
 					<br/>
 					<div class="row mt32 mb32" id="informations">
 						<div class="col-xs-3">
-							<strong>Prescription ID:</strong>
+							<strong>ID Prescripcion :</strong>
 							<p t-field="doc.name"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Prescription Date:</strong>
+							<strong>Fecha de prescripcion:</strong>
 							<p t-field="doc.prescription_date"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Prescribing Doctor:</strong>
+							<strong>Doctor que prescribe:</strong>
 							<p t-field="doc.doctor_id.partner_id.name"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Patient Contact Information:</strong>
+							<strong>Inormacion de contacto del paciente:</strong>
 							<p t-field="doc.patient_id"/>
 							<p t-field="doc.patient_id.id"/>
 							<p t-field="doc.patient_id.patient_id.email"/>
@@ -42,14 +42,14 @@
 						<table class="table table-condensed">
 							<thead>
 								<div>
-									<strong>Prescription Details</strong>
+									<strong>Detalles de prescripcion</strong>
 								</div>
 							</thead>
 							<tbody class="sale_tbody">
 								<t t-foreach="doc.prescription_line_ids" t-as="test">
 									<tr t-if="test.quantity">
 										<td>
-											<strong>Quantity</strong>
+											<strong>Cantidad</strong>
 										</td>
 										<td>
 											<span t-field="test.quantity"/>
@@ -57,7 +57,7 @@
 									</tr>
 									<tr t-if="test.medicament_id">
 										<td>
-											<strong>Medicament</strong>
+											<strong>Medicamentos</strong>
 										</td>
 										<td>
 											<span t-field="test.medicament_id"/>
@@ -65,15 +65,15 @@
 									</tr>
 									<tr t-if="test.allow_substitution">
 										<td>
-											<strong>Substitution</strong>
+											<strong>Sustitucion </strong>
 										</td>
 										<td>
-											<span>Allow Substitution</span>
+											<span>Permite sustitucion</span>
 										</td>
 									</tr>
 									<tr t-if="test.start_treatment">
 										<td>
-											<strong>Start</strong>
+											<strong>Iniciar</strong>
 										</td>
 										<td>
 											<span t-field="test.start_treatment"/>
@@ -81,7 +81,7 @@
 									</tr>
 									<tr t-if="test.end_treatment">
 										<td>
-											<strong>Stop</strong>
+											<strong>Parar</strong>
 										</td>
 										<td>
 											<span t-field="test.end_treatment"/>
@@ -98,7 +98,7 @@
 									</tr>
 									<tr t-if="test.indication">
 										<td>
-											<strong>Indication</strong>
+											<strong>Indicacion</strong>
 										</td>
 										<td>
 											<span t-field="test.indication"/>
@@ -106,7 +106,7 @@
 									</tr>
 									<tr t-if="test.route">
 										<td>
-											<strong>Route</strong>
+											<strong>Ruta</strong>
 										</td>
 										<td>
 											<span t-field="test.route"/>
@@ -114,7 +114,7 @@
 									</tr>
 									<tr t-if="test.medication_dosage_id">
 										<td>
-											<strong>Common Dosage</strong>
+											<strong>Dosis comun</strong>
 										</td>
 										<td>
 											<span t-field="test.medication_dosage_id"/>
@@ -122,7 +122,7 @@
 									</tr>
 									<tr t-if="test.frequency">
 										<td>
-											<strong>Frequency</strong>
+											<strong>Frecuencia</strong>
 										</td>
 										<td>
 											Every
@@ -132,17 +132,17 @@
 									</tr>
 									<tr t-if="test.duration">
 										<td>
-											<strong>Treatment</strong>
+											<strong>Tratamiento</strong>
 										</td>
 										<td>
-											Take during
+											Toma durante
 											<span t-field="test.duration"/>
 											<span t-field="test.duration_period"/>
 										</td>
 									</tr>
 									<tr t-if="test.review">
 										<td>
-											<strong>Review</strong>
+											<strong>Repetir</strong>
 										</td>
 										<td>
 											<span t-field="test.review"/>
@@ -150,7 +150,7 @@
 									</tr>
 									<tr t-if="test.refills">
 										<td>
-											<strong>Refills</strong>
+											<strong>Recargar</strong>
 										</td>
 										<td>
 											<span t-field="test.refills"/>
@@ -158,7 +158,7 @@
 									</tr>
 									<tr t-if="test.short_comment">
 										<td>
-											<strong>Remarks</strong>
+											<strong>Observacion</strong>
 										</td>
 										<td>
 											<span t-field="test.short_comment"/>
@@ -177,11 +177,11 @@
 					</br>
 					<div class="row mt32 mb32" id="informations">
 						<div class="col-xs-3">
-							<strong>Notes:</strong>
+							<strong>Notas:</strong>
 							<span t-field="doc.notes"/>
 						</div>
 						<div class="text-right mb32">
-							<strong>Doctor Signature:</strong>
+							<strong>Firma del doctor:</strong>
 						</div>
 					</div>
 				</div>

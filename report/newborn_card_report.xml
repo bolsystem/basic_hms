@@ -143,16 +143,16 @@
 										<td>
 											<table class="supplier_rightcolumn3">
 		                                       <tr>
-												   <td class="smalltd_left_1">Name: <b><span t-esc="o.baby_name"/></b></td>
+												   <td class="smalltd_left_1">Nombre: <b><span t-esc="o.baby_name"/></b></td>
 											   	</tr>
 												<tr>
-												   <td class="smalltd_left_1">Mother: <b><span t-esc="o.mother_patient_id.patient_id.name"/></b></td>
+												   <td class="smalltd_left_1">Madre: <b><span t-esc="o.mother_patient_id.patient_id.name"/></b></td>
 		                                       </tr>
 												<tr>
-												   <td class="smalltd_left_1">Mother's ID.:   <b><span t-esc="o.mother_patient_id.name"/></b></td>
+												   <td class="smalltd_left_1">ID Madre.:   <b><span t-esc="o.mother_patient_id.name"/></b></td>
 		                                       </tr>
 												<tr>
-												   <td class="smalltd_left_1">DOB: <b><span t-esc="o.birth_date"/></b></td>
+												   <td class="smalltd_left_1">Fecha Nac.: <b><span t-esc="o.birth_date"/></b></td>
 		                                       </tr>
 												<!--<tr>-->
 												   <!--<td class="smalltd_left_1">L.R.No:</td>-->
@@ -165,14 +165,14 @@
 									</tr>
 								  	<tr>
 		                                <td class="supplier_rightcolumn2">
-                                            <span>Gender: </span>
+                                            <span>Genero: </span>
 											<b><span t-field='o.sex' /></b>
 										</td>
 										 <td class="supplier_rightcolumn2">
-                                         <span>Weight(gram): </span>
+                                         <span>Peso(gram): </span>
 											<b><span t-field='o.weight' /></b>
 												<br/>
-                                            <span>Height(cm): </span>
+                                            <span>Altura(cm): </span>
 												<b><span t-field='o.length' /></b>
 										</td>
 		                            </tr>

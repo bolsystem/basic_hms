@@ -10,17 +10,17 @@ class medical_patient_lab_test(models.Model):
     _name = 'medical.patient.lab.test'
     _rec_name = 'medical_test_type_id'
 
-    request = fields.Char('Request', readonly = True)
-    date =  fields.Datetime('Date', default = fields.Datetime.now)
-    lab_test_owner_partner_id = fields.Many2one('res.partner', 'Owner Name')
-    urgent =  fields.Boolean('Urgent',)
+    request = fields.Char('Requeriemiento', readonly = True)
+    date =  fields.Datetime('Fecha', default = fields.Datetime.now)
+    lab_test_owner_partner_id = fields.Many2one('res.partner', 'Nombre del dueño')
+    urgent =  fields.Boolean('Urgente',)
     owner_partner_id = fields.Many2one('res.partner')
-    state = fields.Selection([('draft', 'Draft'),('tested', 'Tested'), ('cancel', 'Cancel')], readonly= True, default = 'draft')
-    medical_test_type_id = fields.Many2one('medical.test_type', 'Test Type',required = True)
-    patient_id = fields.Many2one('medical.patient','Patient' )
+    state = fields.Selection([('draft', 'Borrador'),('tested', 'Probado'), ('cancel', 'Anulado')], readonly= True, default = 'draft')
+    medical_test_type_id = fields.Many2one('medical.test_type', 'Tipo de prueba',required = True)
+    patient_id = fields.Many2one('medical.patient','Paciente' )
     doctor_id = fields.Many2one('medical.physician','Doctor',required=True)
-    insurer_id = fields.Many2one('medical.insurance','Insurer')
-    invoice_to_insurer = fields.Boolean('Invoice to Insurance')
+    insurer_id = fields.Many2one('medical.insurance','Aseguradora')
+    invoice_to_insurer = fields.Boolean('Facturar a Aseguradora')
     lab_res_created = fields.Boolean(default  =  False) 
     is_invoiced = fields.Boolean(copy=False,default = False)
 

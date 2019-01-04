@@ -5,9 +5,9 @@
             <field name="name">medical.physician.form.view</field>
             <field name="model">medical.physician</field>
             <field name="arch" type="xml">
-                <form string="Physician">
+                <form string="Medicos">
                     <notebook>
-                        <page string="Main Info">
+                        <page string="Informacion principal">
                             <group colspan="4" col="4">
                                 <field name="partner_id" required="1"
                                     context="{'default_is_doctor': 1, 'search_default_is_doctor': 1}" />
@@ -17,7 +17,7 @@
                                 <field name="code" />
                             </group>
                         </page>
-                        <page string="Extra Info">
+                        <page string="Informacion extra">
                             <field name="info" />
                         </page>
                     </notebook>
@@ -29,7 +29,7 @@
             <field name="name">medical.physician.search.view</field>
             <field name="model">medical.physician</field>
             <field name="arch" type="xml">
-                <search string="Search Physician">
+                <search string="Buscar medico">
 
                     <separator orientation="vertical" />
                     <field name="partner_id" select="1" />
@@ -38,7 +38,7 @@
                     <newline />
                     <filter string="Doctor" icon="terp-personal"
                         domain="[]" context="{'group_by':'doctor'}" />
-                    <filter string="Date" icon="terp-go-month"
+                    <filter string="Fecha" icon="terp-go-month"
                         domain="[]" context="{'group_by':'prescription_date'}" />
                 </search>
             </field>
@@ -48,7 +48,7 @@
             <field name="name">medical.physician.tree.view</field>
             <field name="model">medical.physician</field>
             <field name="arch" type="xml">
-                <tree string="Physician Information">
+                <tree string="Informacion del medico">
                     <field name="partner_id" />
                     <field name="code" />
                     <field name="institution_partner_id" />
@@ -58,14 +58,14 @@
         </record>
 
         <record id="action_medical_physician" model="ir.actions.act_window">
-            <field name="name">Physicians</field>
+            <field name="name">Medicos</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.physician</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="menu_physician" string="Physicians" name='Physicians'
+        <menuitem id="menu_physician" string="Meidcos" name='Medicos'
             parent="main_menu_configartion" sequence="7" />
 
         <menuitem id="menu_medical_physician" parent="menu_physician"

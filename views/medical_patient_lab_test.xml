@@ -6,13 +6,13 @@
             <field name="name">medical.patient.lab.test.tree.view</field>
             <field name="model">medical.patient.lab.test</field>
             <field name="arch" type="xml">
-                <tree string="Test Requests">
+                <tree string="Pruebas de Laboratorio">
                     <field name="request" readonly="1" />
                     <field name="medical_test_type_id" required="1" />
                     <field name="date" />
                     <field name="patient_id" required="1" />
                     <field name="doctor_id" />
-                    <field name="state" />
+                    <field name="state" string="Estado" />
                 </tree>
             </field>
         </record>
@@ -22,13 +22,13 @@
             <field name="name">medical.patient.lab.test.form.view</field>
             <field name="model">medical.patient.lab.test</field>
             <field name="arch" type="xml">
-                <form string="Test Requests">
+                <form string="Solicitud de pruebas">
                     <header>
                         <button name="%(action_create_lab_result2)d"
-                            string="Create Lab Test" type="action"
+                            string="Crear prueba Laboratorio" type="action"
                             class="oe_highlight" />
                         <button name="%(action_create_lab_invoice2)d"
-                            string="Create Lab Invoice" type="action"
+                            string="Crear factura de Laboratorio" type="action"
                             class="oe_highlight" />
                         <field name="state" widget="statusbar"
                             statusbar_visible="draft,tested,cancel"
@@ -59,7 +59,7 @@
 
 
         <record id="action_medical_patient_lab_test" model="ir.actions.act_window">
-            <field name="name">Lab Requests</field>
+            <field name="name">Pruebas de Laboratorio</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.patient.lab.test</field>
             <field name="view_type">tree</field>
@@ -67,7 +67,7 @@
         </record>
 
         <record id="action_medical_patient_lab_test_draft" model="ir.actions.act_window">
-            <field name="name">Draft Lab Requests</field>
+            <field name="name">Pruebas de Laboratorio en Borrador</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.patient.lab.test</field>
             <field name="view_type">form</field>
@@ -76,7 +76,7 @@
         </record>
 
         <record id="action_medical_patient_lab_test_todays_draft" model="ir.actions.act_window">
-            <field name="name">Today's Draft Lab Requests</field>
+            <field name="name">Pruebas Lababoratorio Borrador de Hoy</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.patient.lab.test</field>
             <field name="view_type">form</field>
@@ -99,17 +99,17 @@
 <!--             <field name="view_mode">tree,form</field> -->
 <!--         </record> -->
 
-        <menuitem name="Laboratory" id="main_menu_laboratory"
+        <menuitem name="Laboratorio" id="main_menu_laboratory"
             parent="main_menu_hospital_management" sequence='7' />
 
-        <menuitem name="Lab Requests" id="menu_lab_requests"
+        <menuitem name="Solicitud de Laboratorio" id="menu_lab_requests"
             parent="basic_hms.main_menu_laboratory"
             sequence="1" />
 
-        <menuitem name="Draft Lab Requests" id="sub_menu_draft_req"
+        <menuitem name="Soli/Laboratorio borrador" id="sub_menu_draft_req"
             parent="menu_lab_requests" action="action_medical_patient_lab_test_draft" />
 
-        <menuitem name="Today's Draft Lab Requests" id="sub_menu_today_draft_req"
+        <menuitem name="Soli/Emborrador de hoy" id="sub_menu_today_draft_req"
             parent="menu_lab_requests" action="action_medical_patient_lab_test_todays_draft" />
 
 <!--             <menuitem id="lab_to_invoice" -->

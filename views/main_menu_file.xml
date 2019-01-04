@@ -7,7 +7,7 @@
            
         <menuitem 
         	id="main_menu_hospital_management"
-        	name="Administrar Centro Medico"
+        	name="Centro Medico"
             web_icon="basic_hms,static/index1.png"
            />
 
@@ -17,18 +17,18 @@
             sequence = '13'
             />
             
-        <!-- QUITAR MENUS....       
+              
     	<menuitem name="Laboratorio"
             id="main_menu_conf_laboratory"
             parent = "main_menu_configartion"
             sequence='0'
-           />
-
-        <menuitem id="menu_nursing" name="Enfermeria"
+            />
+           
+          <!--
+         <menuitem id="menu_nursing" name="Enfermeria"
             parent="main_menu_hospital_management"
-            sequence="8" />
-
-        -->
+            sequence="8"/>
+         -->
 
         <menuitem id="menu_appointment" string="Consultas"
             name='Consultas' parent="main_menu_hospital_management" sequence="1" />

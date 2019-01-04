@@ -33,7 +33,7 @@ class medical_appointments_invoice_wizard(models.TransientModel):
                 'payment_term_id': False,
                 'fiscal_position_id': lab_req.patient_id.patient_id.property_account_position_id.id,
                 'team_id': False,
-                'comment': "Invoice Created from Medical Appointment",
+                'comment': "Esta factura fue creada con -- Centro Medico --",
                 'date_invoice': date.today(),
                 'company_id':lab_req.patient_id.patient_id.company_id.id or False ,
                 }
@@ -84,7 +84,7 @@ class medical_appointments_invoice_wizard(models.TransientModel):
                         if list_of_ids:
                             result['domain'] = "[('id','in',%s)]" % list_of_ids
             else:
-                raise UserError(_(' The Appointment is invoice exempt   '))
+                raise UserError(_(' La consulta esta exenta de facturacion   '))
             return result
 
 

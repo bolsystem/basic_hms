@@ -20,7 +20,7 @@ class medical_health_services_invoice(models.TransientModel):
             raise UserError(_('Already Invoiced'))        
         sale_journals = self.env['account.journal'].search([('type','=','sale')])
         invoice_vals = {
-            'name': "Customer Invoice",
+            'name': "Factura del cliente",
             'origin': lab_req.name or '',
             'type': 'out_invoice',
             'reference': False,
@@ -32,7 +32,7 @@ class medical_health_services_invoice(models.TransientModel):
             'payment_term_id': False,
             'fiscal_position_id': lab_req.patient_id.patient_id.property_account_position_id.id,
             'team_id': False,
-            'comment': "Invoice Created from Health Service",
+            'comment': "Factura creada desde el servicio de salud",
             'date_invoice': date.today(),
             'company_id': lab_req.patient_id.patient_id.company_id.id or False ,
         }
@@ -47,7 +47,7 @@ class medical_health_services_invoice(models.TransientModel):
                     inc_acc = ir_property_obj.get('property_account_income_categ_id', 'product.category')
                 if not invoice_line_account_id:
                     raise UserError(
-                        _('There is no income account defined for this product: "%s". You may have to install a chart of account from Accounting app, settings menu.') %
+                        _('Usted no tiene definida una cuenta de ingreso para para este servicio: "%s". Ud debera crear una desde el menu de contabilidad.') %
                         (p_line.product_id.name,))
                 
                 tax_ids = []

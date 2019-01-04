@@ -26,7 +26,7 @@
                             readonly="1" />
                     </header>
                     <sheet>
-                        <group string="Administrative Data">
+                        <group string="Datos Administrativos">
                             <group>
                                 <field name="name" required="1" />
                                 <field name="patient_id" required="1" />
@@ -74,7 +74,7 @@
             <field name="arch" type="xml">
                 <tree
                     colors="red:admission_type=='emergency';blue:admission_type=='maternity'"
-                    string="Inpatient Registration Info">
+                    string="Información de pacientes hospitalizados">
                     <field name="name" />
                     <field name="patient_id" />
                     <field name="hospitalization_date" />
@@ -88,7 +88,7 @@
         </record>
 
         <record id="action_medical_inpatient_registration" model="ir.actions.act_window">
-            <field name="name">Patient Hospitalization</field>
+            <field name="name">Pacientes Hospitalizados</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.inpatient.registration</field>
             <field name="view_type">form</field>
