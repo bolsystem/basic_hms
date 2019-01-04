@@ -6,19 +6,19 @@
             <field name="name">medical.inpatient.registration.form.view</field>
             <field name="model">medical.inpatient.registration</field>
             <field name="arch" type="xml">
-                <form string="Inpatient Registration Information">
+                <form string="Información de Registro de paciente">
                     <header>
                         <button name="registration_confirm"
-                            states="free" string="Confirm Registration" class="oe_highlight"
+                            states="free" string="Confirmar Registro" class="oe_highlight"
                              type="object" />
                         <button name="registration_cancel"
-                            states="confirmed" class="oe_highlight" string="Cancel Registration"
+                            states="confirmed" class="oe_highlight" string="Anular Registro"
                             type="object" />
                         <button name="registration_admission"
-                            states="confirmed" class="oe_highlight" string="Patient Admission"
+                            states="confirmed" class="oe_highlight" string="Admisión de pacientes"
                              type="object" />
                         <button name="patient_discharge" states="hospitalized" class="oe_highlight"
-                            string="Discharge Patient" 
+                            string="Alta del paciente" 
                             type="object" />
                         <field name="state" widget="statusbar"
                             statusbar_visible="free,confirmed,cancelled,hospitalized"
@@ -58,7 +58,7 @@
                                         </tree>
                                     </field>
                                 </group>
-                        <group string="Care Plan">
+                        <group string="Plan de Cuidado">
                             <field name="nursing_plan" />
                             <field name="discharge_plan" />
                         </group>

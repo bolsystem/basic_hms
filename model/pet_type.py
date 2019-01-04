@@ -6,8 +6,8 @@ from odoo import api, fields, models, _
 class pet_type(models.Model):
     _name = 'pet.type'
 
-    name = fields.Char('Name', required = True)
-    code = fields.Char('Code')
+    name = fields.Char('Nombre', required = True)
+    code = fields.Char('Codigo')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

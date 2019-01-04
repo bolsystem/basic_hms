@@ -11,7 +11,7 @@
                     <field name="relative_partner_id" />
                 </field>
                 <notebook>
-                    <page string="Medical">
+                    <page string="Medico">
                         <group colspan="6" col="6">
                             <field name="is_patient" />
                             <field name="is_doctor" />
@@ -30,7 +30,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="act_res_partner">
-            <field name="name">Insurances Company</field>
+            <field name="name">Compañia aseguradora</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">res.partner</field>
             <field name="view_type">form</field>
@@ -40,10 +40,10 @@
             </field>
         </record>
 
-        <menuitem id="menu_health_centers1" name="Health Centers"
+        <menuitem id="menu_health_centers1" name="Centro Medico"
             parent="main_menu_configartion" />
 
-        <menuitem id="menu_insurance" name="Insurances"
+        <menuitem id="menu_insurance" name="Seguros"
             parent="main_menu_configartion" sequence='9' />
         <menuitem id="menu_insurance_company" action="act_res_partner"
             sequence="0" parent="menu_insurance" />

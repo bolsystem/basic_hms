@@ -15,9 +15,9 @@
             <field name="name">medical.medicament.form.view</field>
             <field name="model">medical.medicament</field>
             <field name="arch" type="xml">
-                <form string="medicaments">
+                <form string="medicamentos">
                     <notebook>
-                        <page string="Main Info">
+                        <page string="Informacion Principal">
                             <group colspan="4" col="4">
                                 <field name="product_id" required="1"
                                     context="{'default_is_medicament': 1, 'search_default_is_medicament': 1,'search_default_type': 'service','default_type': 'service'}" />
@@ -30,21 +30,21 @@
                                 <field name="indications" colspan="4" />
                             </group>
                         </page>
-                        <page string="Presentation">
+                        <page string="Presentacion">
                             <field name="presentation" />
                         </page>
                         <page string="Composition">
                             <field name="composition" />
                         </page>
 
-                        <page string="Dosage">
+                        <page string="Dosis">
                             <group colspan="4" col="4">
                                 <field name="dosage" />
                                 <field name="overdosage" />
                             </group>
                         </page>
 
-                        <page string="Pregnancy / Lactancy">
+                        <page string="Embarazo / Lactante">
                             <group colspan="4" col="4">
                                 <field name="pregnancy_warning" />
                                 <field name="pregnancy_category" />
@@ -52,15 +52,15 @@
                             </group>
                         </page>
 
-                        <page string="Adverse Reactions">
+                        <page string="Reaccion adversa">
                             <field name="adverse_reaction" />
                         </page>
 
-                        <page string="Storage Conditions">
+                        <page string="Condicion de almacenaje">
                             <field name="storage" />
                         </page>
 
-                        <page string="Extra Info">
+                        <page string="Info Extra">
                             <field name="notes" />
                         </page>
                     </notebook>
@@ -73,7 +73,7 @@
             <field name="name">medical.medicament.tree.view</field>
             <field name="model">medical.medicament</field>
             <field name="arch" type="xml">
-                <tree string="medicament">
+                <tree string="medicamentos">
                     <field name="product_id" />
                     <field name="active_component" />
 <!--                     <field name="category_id" /> -->
@@ -86,7 +86,7 @@
         </record>
 
         <record id="action_medical_medicament" model="ir.actions.act_window">
-            <field name="name">Medicaments</field>
+            <field name="name">Medicamentos</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.medicament</field>
             <field name="view_type">form</field>

@@ -24,7 +24,7 @@ class create_prescription_invoice(models.TransientModel):
 
             sale_journals = self.env['account.journal'].search([('type','=','sale')])
             invoice_vals = {
-            'name': "Customer Invoice",
+            'name': "Factura de cliente",
             'origin': lab_req.name or '',
             'type': 'out_invoice',
             'reference': False,

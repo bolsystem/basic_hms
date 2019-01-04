@@ -14,13 +14,13 @@ class medical_patient_rounding(models.Model):
         else:
             self.anisocoria = True
      
-    medical_inpatient_registration = fields.Many2one('medical.inpatient.registration',string="Registration Code",required=True)
-    health_physician_id = fields.Many2one('medical.physician',string="Health Professional",readonly=True)
-    evaluation_start = fields.Datetime(string="Start",required=True)
-    evaluation_end = fields.Datetime(string="End",required=True)
-    environmental_assessment = fields.Char(string='Environment')
+    medical_inpatient_registration = fields.Many2one('medical.inpatient.registration',string="Codigo de Registro",required=True)
+    health_physician_id = fields.Many2one('medical.physician',string="Medico profesional",readonly=True)
+    evaluation_start = fields.Datetime(string="Inicio",required=True)
+    evaluation_end = fields.Datetime(string="Fin",required=True)
+    environmental_assessment = fields.Char(string='Ambiente')
     icu_patient = fields.Boolean(string='ICU')
-    warning = fields.Boolean(string='Warning')
+    warning = fields.Boolean(string='Aviso')
     pain = fields.Boolean(string='Pain')
     potty = fields.Boolean(string='Potty')
     position = fields.Boolean(string='Position')

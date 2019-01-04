@@ -8,38 +8,38 @@ class medical_patient_medication1(models.Model):
     _name = 'medical.patient.medication1'
     _rec_name = 'medical_patient_medication_id'
 
-    medical_medicament_id = fields.Many2one('medical.medicament',string='Medicament',required=True)
-    medical_patient_medication_id = fields.Many2one('medical.patient',string='Medication')
-    is_active = fields.Boolean(string='Active', default = True)
+    medical_medicament_id = fields.Many2one('medical.medicament',string='Medicamento',required=True)
+    medical_patient_medication_id = fields.Many2one('medical.patient',string='Medicacion')
+    is_active = fields.Boolean(string='Activo', default = True)
 #     new_born_id =  fields.Many2one('medical.newborn', 'New Born')
-    start_treatment = fields.Datetime(string='Start Of Treatment',required=True)
-    course_completed = fields.Boolean(string="Course Completed")
-    doctor_physician_id = fields.Many2one('medical.physician',string='Physician')
-    indication_pathology_id = fields.Many2one('medical.pathology',string='Indication')
-    end_treatment = fields.Datetime(string='End Of Treatment',required=True)
-    discontinued = fields.Boolean(string='Discontinued')
+    start_treatment = fields.Datetime(string='Inicio de tratamiento',required=True)
+    course_completed = fields.Boolean(string="Tratamiento completo")
+    doctor_physician_id = fields.Many2one('medical.physician',string='Medico')
+    indication_pathology_id = fields.Many2one('medical.pathology',string='Indicacion')
+    end_treatment = fields.Datetime(string='Fin de tratamiento',required=True)
+    discontinued = fields.Boolean(string='Descontinuado')
 #     drug_from_id = fields.Many2one('medical.drug.form',string='Form')
-    drug_route_id = fields.Many2one('medical.drug.route',string=" Administration Route ")
-    dose = fields.Float(string='Dose')
+    drug_route_id = fields.Many2one('medical.drug.route',string=" Guia de administracion ")
+    dose = fields.Float(string='Dosis')
     qty = fields.Integer(string='X')
-    dose_unit_id = fields.Many2one('medical.dose.unit',string='Dose Unit')
-    duration = fields.Integer(string="Treatment Duration")
-    duration_period = fields.Selection([('minutes','Minutes'),
-                                        ('hours','hours'),
-                                        ('days','Days'),
-                                        ('months','Months'),
-                                        ('years','Years'),
-                                        ('indefine','Indefine')],string='Treatment Period')
-    medication_dosage_id = fields.Many2one('medical.medication.dosage',string='Frequency')
-    admin_times = fields.Char(string='Admin Hours')
-    frequency = fields.Integer(string='Frequency')
-    frequency_unit = fields.Selection([('seconds','Seconds'),
-                                       ('minutes','Minutes'),
-                                       ('hours','hours'),
-                                       ('days','Days'),
-                                       ('weeks','Weeks'),
-                                       ('wr','When Required')],string='Unit')
-    notes =fields.Text(string='Notes')
+    dose_unit_id = fields.Many2one('medical.dose.unit',string='Unidad de dosis')
+    duration = fields.Integer(string="Duracion de tratamiento")
+    duration_period = fields.Selection([('minutes','Minutos'),
+                                        ('hours','Horas'),
+                                        ('days','Dias'),
+                                        ('months','Moses'),
+                                        ('years','Años'),
+                                        ('indefine','Indefinido')],string='Periodo de tratamiento')
+    medication_dosage_id = fields.Many2one('medical.medication.dosage',string='Frecuencia')
+    admin_times = fields.Char(string='Horas de administracion')
+    frequency = fields.Integer(string='Frecuencia')
+    frequency_unit = fields.Selection([('seconds','Segundos'),
+                                       ('minutes','Minutos'),
+                                       ('hours','Horas'),
+                                       ('days','Dias'),
+                                       ('weeks','Meses'),
+                                       ('wr','Cuando se requerido')],string='Unidad')
+    notes =fields.Text(string='Notas')
 
 
 # vim=expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

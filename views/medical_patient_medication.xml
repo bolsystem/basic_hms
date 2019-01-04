@@ -7,7 +7,7 @@
             <field name="view_mode">form</field>
             <field name="view_type">form</field>
             <field name="arch" type="xml">
-                <form string="Medication History">
+                <form string="Historico de Medicacion">
                     <group>
                         <group colspan="4" col="4">
                             <field name="medicament" />
@@ -19,35 +19,35 @@
                             <field name="course_completed" />
                             <field name="discontinued" />
                         </group>
-                        <separator colspan="4" string="Admnistration" />
+                        <separator colspan="4" string="Administracion" />
                         <group colspan="4" col="4">
 <!--                             <field name="form" /> -->
                             <field name="route" />
                         </group>
-                        <separator colspan="4" string="Dosage" />
+                        <separator colspan="4" string="Dosis" />
                         <group colspan="4" col="4">
                             <field name="dose" />
                             <field name="qty" />
                             <field name="dose_unit" />
                         </group>
                         <separator colspan="4"
-                            string=" Treatment Duration " />
+                            string=" Duracion del tratamiento " />
                         <group colspan="4" col="4">
                             <field name="duration" />
                             <field name="duration_period" />
                         </group>
-                        <separator colspan="4" string="  Common Dosage  " />
+                        <separator colspan="4" string="  Dosis comun  " />
                         <group colspan="4" col="4">
                             <field name="common_dosage" />
                             <field name="admin_times" />
                         </group>
                         <separator colspan="4"
-                            string="  Specific Dosage  " />
+                            string="  Dosis especifica  " />
                         <group colspan="4" col="4">
                             <field name="frequency" />
                             <field name="frequency_unit" />
                         </group>
-                        <separator colspan="4" string=" Notes" />
+                        <separator colspan="4" string=" Notas" />
                         <group colspan="4" col="4">
                             <field name="notes" />
                         </group>
@@ -60,7 +60,7 @@
             <field name="name">medical.patient.medication.tree</field>
             <field name="model">medical.patient.medication</field>
             <field name="arch" type="xml">
-                <tree string="Medication">
+                <tree string="Medicacion">
                     <field name="medicament" />
                     <field name="doctor_physician_id" />
                     <field name="is_active" />

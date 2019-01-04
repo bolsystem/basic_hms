@@ -6,9 +6,9 @@ from odoo import models, fields, api, _
 class medical_diet_belief(models.Model):
     _name = 'medical.diet.belief'
 
-    code = fields.Char(string='Code',required=True)
+    code = fields.Char(string='Codigo',required=True)
     description = fields.Text(string='Description',required=True)
-    name = fields.Char(string='Belief')
+    name = fields.Char(string='Creencia')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:s

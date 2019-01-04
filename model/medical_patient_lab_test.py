@@ -12,7 +12,7 @@ class medical_patient_lab_test(models.Model):
 
     request = fields.Char('Requeriemiento', readonly = True)
     date =  fields.Datetime('Fecha', default = fields.Datetime.now)
-    lab_test_owner_partner_id = fields.Many2one('res.partner', 'Nombre del dueño')
+    lab_test_owner_partner_id = fields.Many2one('res.partner', 'Nombre del propietario')
     urgent =  fields.Boolean('Urgente',)
     owner_partner_id = fields.Many2one('res.partner')
     state = fields.Selection([('draft', 'Borrador'),('tested', 'Probado'), ('cancel', 'Anulado')], readonly= True, default = 'draft')

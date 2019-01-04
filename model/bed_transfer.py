@@ -7,12 +7,12 @@ from datetime import date
 class bed_transfer(models.Model):
     _name = 'bed.transfer'
 
-    name = fields.Char("Name")
-    date = fields.Datetime(string='Date')
-    bed_from = fields.Char(string='From')
-    bed_to = fields.Char(string='To')
-    reason = fields.Text(string='Reason')
-    inpatient_id = fields.Many2one('medical.inpatient.registration',string='Inpatient Id')
+    name = fields.Char("Nombre")
+    date = fields.Datetime(string='Fecha')
+    bed_from = fields.Char(string='Desde')
+    bed_to = fields.Char(string='Hasta')
+    reason = fields.Text(string='Razon')
+    inpatient_id = fields.Many2one('medical.inpatient.registration',string='Identificación de paciente hospitalizado')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:s

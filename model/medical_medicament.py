@@ -19,30 +19,30 @@ class medical_medicament(models.Model):
                 self.qty_available = 0
                 self.price = 0.0
 
-    product_id  = fields.Many2one('product.product', 'Name')
-    therapeutic_action = fields.Char('Therapeutic effect', help = 'Therapeutic action')
+    product_id  = fields.Many2one('product.product', 'Nombre')
+    therapeutic_action = fields.Char('Therapeutic effect', help = 'Accion terapeutica')
     price = fields.Float(compute=onchange_product,string='Price',store=True)
 #     category_id = fields.Many2one('medicament.category', 'Category')
-    qty_available = fields.Integer(compute=onchange_product,string='Quantity Available',store=True)
-    indications = fields.Text('Indications')
-    active_component = fields.Char(string="Active Component")
-    presentation = fields.Text('Presentation')
-    composition = fields.Text('Composition')
-    dosage = fields.Text('Dosage Instructions')
-    pregnancy = fields.Text('Pregnancy')
-    overdosage = fields.Text('Overdosage')
-    pregnancy_warning = fields.Boolean('Pregnancy Warning')
-    pregnancy_category = fields.Selection([('a','A'),('b','B'), ('c','C'), ('d', 'D'), ('x', 'X'), ('n','N')], help = """"** FDA Pregancy Categories ***CATEGORY A :Adequate and well-controlled human studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy (and there is no evidence of risk in later trimesters)CATEGORY B : Animal reproduction studies have failed todemonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women OR Animal studies have shown an adverse effect, but adequate and well-controlled studies in pregnant women have failed to demonstrate a risk to the fetus in any trimester.
+    qty_available = fields.Integer(compute=onchange_product,string='Cantidad disponible',store=True)
+    indications = fields.Text('Indicaciones')
+    active_component = fields.Char(string="Componente activo")
+    presentation = fields.Text('Presentacion')
+    composition = fields.Text('Composicion')
+    dosage = fields.Text('Introucciones de dosis')
+    pregnancy = fields.Text('Embarazo')
+    overdosage = fields.Text('Sobredosis')
+    pregnancy_warning = fields.Boolean('Advertencia de Embarazo')
+    pregnancy_category = fields.Selection([('a','A'),('b','B'), ('c','C'), ('d', 'D'), ('x', 'X'), ('n','N')], help = """"** FDA Categorias de embarazo ***CATEGORIA A :Los estudios en humanos adecuados y bien controlados no han demostrado un riesgo para el feto en el primer trimestre del embarazo (y no hay evidencia de riesgo en los trimestres posteriores) CATEGORÍA B: Los estudios de reproducción en animales han fallado para demostrar un riesgo para el feto y no hay estudios adecuados y bien controlados en mujeres embarazadas O Los estudios en animales han mostrado un efecto adverso, pero los estudios adecuados y bien controlados en mujeres embarazadas no han podido Demostrar un riesgo para el feto en cualquier trimestre.
 
-CATEGORY C : Animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks. 
+CATEGORIA C : Los estudios de reproducción en animales han mostrado un efecto adverso en el feto y no existen estudios adecuados y bien controlados en humanos, pero los beneficios potenciales pueden justificar el uso del medicamento en mujeres embarazadas a pesar de los riesgos potenciales. 
 
- CATEGORY D : There is positive evidence of human fetal  risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.
+ CATEGORIA D : Existe evidencia positiva de riesgo fetal humano basado en datos de reacciones adversas de la experiencia de investigación o mercadotecnia o estudios en humanos, pero los beneficios potenciales pueden justificar el uso del medicamento en mujeres embarazadas a pesar de los riesgos potenciales.
 
-CATEGORY X : Studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.
+CATEGORIA X : Los estudios en animales o humanos han demostrado anormalidades fetales y / o hay evidencia positiva de riesgo fetal humano basado en datos de reacciones adversas de investigación o experiencia en mercadeo, y los riesgos involucrados en el uso del medicamento en mujeres embarazadas claramente superan los beneficios potenciales.
 
-CATEGORY N : Not yet classified""")
+CATEGORIA N : Aún no clasificado""")
 
-    adverse_reaction = fields.Text('Adverse Reactions')
-    storage = fields.Text('Storage Condition')
-    notes = fields.Text('Extra Info')
+    adverse_reaction = fields.Text('Reacion adversa')
+    storage = fields.Text('Condicion de almacenamiento')
+    notes = fields.Text('Informacion extra')
 

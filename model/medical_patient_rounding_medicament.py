@@ -6,10 +6,10 @@ from odoo import api, fields, models, _
 class medical_patient_rounding_medicament(models.Model):
     _name = 'medical.patient.rounding.medicament'
     
-    medicament_id = fields.Many2one('medical.medicament',string='Medicament',required=True)
-    quantity = fields.Integer(string="Quantity")
+    medicament_id = fields.Many2one('medical.medicament',string='Medicamento',required=True)
+    quantity = fields.Integer(string="Cantidad")
     lot_id = fields.Many2one('stock.production.lot',string='Lot',required=True)
-    short_comment = fields.Char(string='Comment')
+    short_comment = fields.Char(string='Comentario')
     product_id = fields.Many2one('product.product',string='Product')
-    medical_patient_rounding_medicament_id = fields.Many2one('medical.patient.rounding',string="Medicaments") 
+    medical_patient_rounding_medicament_id = fields.Many2one('medical.patient.rounding',string="Medicamentos") 
 
