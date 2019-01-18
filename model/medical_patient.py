@@ -52,6 +52,7 @@ class medical_patient(models.Model):
     cause_of_death = fields.Char(string='Cause de la muerte')
     receivable = fields.Float(string="Cuenta x cobrar", readonly=True)
     current_insurance_id = fields.Many2one('medical.insurance',string="Seguro")
+    procedencia = fields.Char( string="Lugar/Procedencia", help="Ej. Montero, Warnes. San Ignacio, Etc.")
     partner_address_id = fields.Many2one('res.partner', string="Direccion", )
     primary_care_physician_id = fields.Many2one('medical.physician', string="Medico Principal")
     patient_status = fields.Char(string="Estado de hospitalizacion",readonly=True)

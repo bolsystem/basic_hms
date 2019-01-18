@@ -41,7 +41,7 @@
                         </group>
                         <group>
                             <separator colspan="4"
-                                string="Informacion critica del paciente" />
+                                string="Informacion Critica del paciente" />
                             <newline />
                             <field colspan="6" name="critical_info"
                                 nolabel="1" />
@@ -53,6 +53,7 @@
                                         <field name="blood_type" />
 <!--                                         <field name="medical_ethnicity_id" /> -->
                                         <field name="current_insurance_id" />
+                                        <field name="procedencia" placeholder="Ej.Montero,San Ignacio, Etc."/>
                                     </group>
                                     <group>
                                         <field name="rh" />
@@ -64,10 +65,11 @@
                                 </group>
 
                                 <group colspan="4"
-                                    string="Informacion extra del paciente">
+                                    string="Información extra del paciente">
                                     <field colspan="4" name="general_info"
                                         nolabel="1" />
                                     <newline />
+                                    <!-- INICIO MUERTE
                                     <group>
                                         <field name="deceased" />
                                         <field name="date_of_death"
@@ -75,6 +77,7 @@
                                         <field name="cause_of_death"
                                             attrs="{'invisible':[('deceased','=',False)]}" />
                                     </group>
+                                     FIN DE MUERTE          -->
                                 </group>
                             </page>
                             <!--
@@ -106,6 +109,7 @@
 <!--                                         colspan="4" widget="one2many_list" /> -->
 <!--                                 </group> -->
 <!--                             </page> -->
+                            <!-- INICI SOCIO ECONOMIA
                             <page string="Socio economia">
                                 <notebook>
                                     <page string="Principal">
@@ -114,7 +118,7 @@
                                                 <field name="ses" />
                                                 <field name="education" />
                                                 <field name="housing" />
-<!--                                                 <field name="occupation_id" /> -->
+                                       
                                             </group>
                                             <group>
                                                 <field name="works_at_home" />
@@ -181,6 +185,8 @@
                                     </page>
                                 </notebook>
                             </page>
+                           FIN DE SOCIO ECONOMIA   
+                           -->
                             <!--
                             <page string="Ginecologia / Obs"
                                 attrs="{'invisible':[('sex','=','m')]}">
@@ -227,7 +233,7 @@
                                 </group>
                             </page>
                              -->
-
+                           <!-- INICIO ESTILO DE VIDA
                             <page string="Estilo de Vida">
                                 <notebook>
                                     <page string="Dietas y Ejercios">
@@ -308,13 +314,7 @@
                                                     </group>
                                                 </group>
                                             </page>
-<!--                                             <page string="Recreational Drugs"> -->
-<!--                                                 <group> -->
-<!--                                                     <field name="drugs_ids" -->
-<!--                                                         nolabel="1" -->
-<!--                                                         widget="one2many_list" /> -->
-<!--                                                 </group> -->
-<!--                                             </page> -->
+                                         
                                         </notebook>
                                     </page>
 
@@ -373,6 +373,8 @@
                                     </page>
                                 </notebook>
                             </page>
+                              FIN ESTILO DE VIDA
+                                -->
 
 <!--                             <page string="Lab Tests"> -->
 <!--                                 <field name="lab_test_ids" -->
@@ -397,7 +399,23 @@
 <!--                                 </field> -->
 <!--                             </page> -->
 
-                            <page string="Medicacion">
+                            <page string="Medicación">
+                                <group>
+                                    <field name="medication_ids"
+                                        string="Historico de medicacion"
+                                        colspan="4" widget="one2many_list" >
+                                        <tree>
+                                            <field name="medical_medicament_id" />
+                                            <field name="indication_pathology_id" />
+                                            <field name="start_treatment" />
+                                            <field name="end_treatment" />
+                                            <field name="is_active" />
+                                            <field name="doctor_physician_id" />
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Informe médico">
                                 <group>
                                     <field name="medication_ids"
                                         string="Historico de medicacion"
@@ -414,7 +432,7 @@
                                 </group>
                             </page>
                             
-
+                             <!-- INICIO FIN VACUNA
                             <page string="Vacunas">
                                 <group colspan="4">
                                     <field name="medical_vaccination_ids"
@@ -427,7 +445,8 @@
                                         </tree>
                                     </field>
                                 </group>
-                            </page>
+                            </page>  FIN VACUNA
+                                      -->
 
 
                         </notebook>
@@ -447,7 +466,7 @@
                     <field name="sex" />
                     <field name="date_of_birth" />
                     <field name="primary_care_physician_id" />
-                    <field name="deceased" />
+                 <!--  <field name="deceased" /> -->
                 </tree>
             </field>
         </record>

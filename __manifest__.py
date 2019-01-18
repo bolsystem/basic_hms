@@ -3,7 +3,7 @@
 
 {
 
-    "name" : "Basic Hospital Management System",
+    "name" : "Sistems Basico de Gestin Hospitalaria",
     "version" : "11.0.0.4",
     "price": 55,
     "currency": 'EUR',
