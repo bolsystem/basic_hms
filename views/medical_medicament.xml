@@ -33,7 +33,7 @@
                         <page string="Presentacion">
                             <field name="presentation" />
                         </page>
-                        <page string="Composition">
+                        <page string="Composicion">
                             <field name="composition" />
                         </page>
 

@@ -37,6 +37,7 @@
 												<br></br>
 												<b>Grupo de sangre:</b>
 												<span t-field='o.blood_type' />
+												<span t-field='o.rh' />
 												<br></br>
 												<b>Direccion:</b>
 												<span

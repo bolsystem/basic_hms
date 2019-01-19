@@ -20,15 +20,15 @@ class medical_medicament(models.Model):
                 self.price = 0.0
 
     product_id  = fields.Many2one('product.product', 'Nombre')
-    therapeutic_action = fields.Char('Therapeutic effect', help = 'Accion terapeutica')
-    price = fields.Float(compute=onchange_product,string='Price',store=True)
+    therapeutic_action = fields.Char('Efecto terapeutico', help = 'Accion terapeutica')
+    price = fields.Float(compute=onchange_product,string='Precio',store=True)
 #     category_id = fields.Many2one('medicament.category', 'Category')
     qty_available = fields.Integer(compute=onchange_product,string='Cantidad disponible',store=True)
     indications = fields.Text('Indicaciones')
     active_component = fields.Char(string="Componente activo")
     presentation = fields.Text('Presentacion')
     composition = fields.Text('Composicion')
-    dosage = fields.Text('Introucciones de dosis')
+    dosage = fields.Text('Introducciones de dosis')
     pregnancy = fields.Text('Embarazo')
     overdosage = fields.Text('Sobredosis')
     pregnancy_warning = fields.Boolean('Advertencia de Embarazo')

@@ -7,7 +7,7 @@
             id="report_print_prescription"
             model="medical.prescription.order"
             report_type="qweb-pdf"
-            string="Prescription"
+            string="Prescripcion"
             name="basic_hms.prescription_demo_report"
             file="basic_hms.prescription_demo_report"
             />
@@ -44,10 +44,11 @@
             id="report_print_patient_medications_document"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Historia Medica"
+            string="Historial de medicacion"
             name="basic_hms.patient_medications_document"
             file="basic_hms.patient_medications_document"
             />
+            <!--
         <report
             id="report_print_patient_vaccinations_document"
             model="medical.patient"
@@ -56,14 +57,16 @@
             name="basic_hms.patient_vaccinations"
             file="basic_hms.patient_vaccinations"
             />
+             -->
         <report
             id="report_print_patient_diseases_document"
             model="medical.patient"
             report_type="qweb-pdf"
-            string="Reporte de enfermedades"
+            string="Informe médico"
             name="basic_hms.patient_diseases_document"
             file="basic_hms.patient_diseases_document"
             />
+            
         <report
             id="report_print_lab_result_demo"
             model="medical.lab"

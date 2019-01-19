@@ -80,12 +80,12 @@
                                      FIN DE MUERTE          -->
                                 </group>
                             </page>
-                            <!--
-                            <page string="Enfermedades">
+                            
+                            <page string="Informe Médico/Patologíco">
                                 <field name="patient_disease_ids"
                                     nolabel="1" widget="one2many_list" />
                             </page>
-                            -->
+                          
 
 <!--                             <page string="Evaluations"> -->
 <!--                                 <field name="evaluation_ids" -->
@@ -415,6 +415,7 @@
                                     </field>
                                 </group>
                             </page>
+                            <!--                            
                             <page string="Informe médico">
                                 <group>
                                     <field name="medication_ids"
@@ -431,23 +432,9 @@
                                     </field>
                                 </group>
                             </page>
-                            
-                             <!-- INICIO FIN VACUNA
-                            <page string="Vacunas">
-                                <group colspan="4">
-                                    <field name="medical_vaccination_ids"
-                                        nolabel="1">
-                                        <tree>
-                                            <field name="vaccine_product_id" />
-                                            <field name="dose" />
-                                            <field name="date" />
-                                            <field name="observations" />
-                                        </tree>
-                                    </field>
-                                </group>
-                            </page>  FIN VACUNA
-                                      -->
-
+                            -->
+                          
+                      
 
                         </notebook>
                     </sheet>

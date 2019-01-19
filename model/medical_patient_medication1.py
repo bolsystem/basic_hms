@@ -9,6 +9,7 @@ class medical_patient_medication1(models.Model):
     _rec_name = 'medical_patient_medication_id'
 
     medical_medicament_id = fields.Many2one('medical.medicament',string='Medicamento',required=True)
+    fecha_imedico = fields.Datetime(string="Fecha",required=True,default= fields.Datetime.now)
     medical_patient_medication_id = fields.Many2one('medical.patient',string='Medicacion')
     is_active = fields.Boolean(string='Activo', default = True)
 #     new_born_id =  fields.Many2one('medical.newborn', 'New Born')

@@ -12,7 +12,7 @@
 <br/>
                             <div class="row">
                                 <div>
-                                    <h3 class="text-center"><strong>INFOMACION DE CONSULTA</strong></h3>
+                                    <h3 class="text-center"><strong>INFORME DE CONSULTA</strong></h3>
                                 </div>
                             </div>
                             <br/><br/><br/><br/><br/>
@@ -20,6 +20,29 @@
                               <div>
                                     <table>
                                     <tbody class="sale_tbody">
+
+                                      <tr>
+                                                <td width="10%">
+                                                    <strong>COD. CONSULTA:</strong>
+                                                </td>
+
+                                                 <td width="5%">
+                                                    <span t-field=" doc.name"/>
+                                                </td>
+
+                                                <td width="10%">
+                                                </td>
+
+                                                <td width="10%">
+                                                 <strong> </strong>
+                                                </td>
+
+                                               <td width="5%">
+                                                <!--
+                                                 <span t-field="doc.appointment_date"/>
+                                               -->
+                                                </td>
+                                        </tr>
                                         <tr>
                                                 <td width="10%">
                                                     <strong>Paciente:</strong>
@@ -37,7 +60,7 @@
                                                 </td>
 
                                                 <td width="10%" class="text-left">
-                                                    <span t-field="doc.name"/>
+                                                    <span t-field="doc.consultations_id"/>
                                                 </td>
                                           </tr>
 

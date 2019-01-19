@@ -8,7 +8,7 @@
                         <div class="oe_structure"/>
                         <div class="row mt32 mb32">
                             <div>
-                                <h4 class="text-center"><strong>RESUMEN DE ENFERMEDADADES DEL PACIENTE</strong></h4>
+                                <h4 class="text-center"><strong>INFORME PATOLOGÍCO DEL PACIENTE</strong></h4>
                             </div>
                         </div>
                         <br/> <br/><br/>
@@ -49,7 +49,7 @@
                         <br/><br/>
                         <div class="row">
                             <div>
-                                <h5 class="text-center"><strong>Información importante sobre las enfermedades, alergias y procedimientos del paciente:</strong></h5>
+                                <h5 class="text-center"><strong>Información importante sobre las patologias, alergias y tratamientos del paciente:</strong></h5>
                             </div>
                         </div>
                      <br/>
@@ -57,7 +57,7 @@
               <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th>Enfermedad (ICD-10)</th>
+                        <th>Patología</th>
                         <th>Severidad</th>
                         <th>Estado</th>
                         <th>Activa</th>
