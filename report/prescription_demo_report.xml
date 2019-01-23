@@ -11,7 +11,7 @@
 <br/>
 							<div class="row">
 							<h3 class="text-center mb32">
-								<strong>REPORTE DE PRESCRIPCION</strong>
+								<strong>PRESCRIPCION</strong>
 							</h3>
 					</div>
 					<br/>
@@ -29,7 +29,7 @@
 							<p t-field="doc.doctor_id.partner_id.name"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Inormacion de contacto del paciente:</strong>
+							<strong>Datos del paciente:</strong>
 							<p t-field="doc.patient_id"/>
 							<p t-field="doc.patient_id.id"/>
 							<p t-field="doc.patient_id.patient_id.email"/>
@@ -81,7 +81,7 @@
 									</tr>
 									<tr t-if="test.end_treatment">
 										<td>
-											<strong>Parar</strong>
+											<strong>Finalizar</strong>
 										</td>
 										<td>
 											<span t-field="test.end_treatment"/>
@@ -89,7 +89,7 @@
 									</tr>
 									<tr t-if="test.form">
 										<td>
-											<strong>Form</strong>
+											<strong>Formula</strong>
 										</td>
 										<td>
 											<span t-field="test.qty"/>
@@ -98,7 +98,7 @@
 									</tr>
 									<tr t-if="test.indication">
 										<td>
-											<strong>Indicacion</strong>
+											<strong>Indicaciones</strong>
 										</td>
 										<td>
 											<span t-field="test.indication"/>
@@ -106,7 +106,7 @@
 									</tr>
 									<tr t-if="test.route">
 										<td>
-											<strong>Ruta</strong>
+											<strong>Via</strong>
 										</td>
 										<td>
 											<span t-field="test.route"/>
@@ -125,7 +125,7 @@
 											<strong>Frecuencia</strong>
 										</td>
 										<td>
-											Every
+											Por
 											<span t-field="test.frequency"/>
 											<span t-field="test.frequency_unit"/>
 										</td>
@@ -158,7 +158,7 @@
 									</tr>
 									<tr t-if="test.short_comment">
 										<td>
-											<strong>Observacion</strong>
+											<strong>Notas</strong>
 										</td>
 										<td>
 											<span t-field="test.short_comment"/>
