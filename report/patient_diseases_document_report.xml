@@ -8,10 +8,10 @@
                         <div class="oe_structure"/>
                         <div class="row mt32 mb32">
                             <div>
-                                <h4 class="text-center"><strong>INFORME PATOLOGÍCO DEL PACIENTE</strong></h4>
+                                <h4 class="text-center"><strong>INFORME MÉDICO</strong></h4>
                             </div>
                         </div>
-                        <br/> <br/><br/>
+                        <br/> 
                         <div class="row">
                              <div class="col-xs-4">
                             	<div>
@@ -58,12 +58,14 @@
                 <thead>
                     <tr>
                         <th>Patología</th>
+                        <!--
                         <th>Severidad</th>
                         <th>Estado</th>
                         <th>Activa</th>
                         <th>Infecciosa</th>
-                        <th>Diagnostico</th>
-                        <th>Observaciones</th>
+                        <th>F/Consulta</th>
+                         -->
+                        <th>Informe médico</th>
                     </tr>
                </thead>
                <tbody class="sale_tbody">
@@ -72,6 +74,7 @@
                             <td>
                                <span t-field="l.pathology_id.name"/>
                             </td>
+                            <!--
                              <td>
                                <span t-field="l.disease_severity"/>
                             </td>
@@ -83,6 +86,7 @@
                             </td>
                              <td>
                                <span t-field="l.is_infectious"/>
+                             -->
                             </td>
                              <td>
                                <span t-field="l.diagnosis_date"/>
