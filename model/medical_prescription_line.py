@@ -8,7 +8,7 @@ class medical_prescription_line(models.Model):
     _name = "medical.prescription.line"
 
     name = fields.Many2one('medical.prescription.order','Prescripcion ID')
-    medicament_id = fields.Many2one('medical.medicament','Medicamentos')
+    medicament_id = fields.Many2one('medical.medicament','Medicamento')
     indication = fields.Char('Indicacion')
     allow_substitution = fields.Boolean('Permitir sustitcion')
     form = fields.Char('Formula')
@@ -27,7 +27,7 @@ class medical_prescription_line(models.Model):
     quantity = fields.Integer('Cantidad')
     review = fields.Datetime('Revision')
     refills = fields.Integer('Recargas#')
-    short_comment = fields.Char('Comentario', size=128 )
+    short_comment = fields.Text('Nota de la prescripcion', size=128 )
     end_treatment = fields.Datetime('Fin de tratamiento')
     start_treatment = fields.Datetime('Inicio de tratamiento')
 

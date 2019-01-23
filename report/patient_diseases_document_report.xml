@@ -8,10 +8,10 @@
                         <div class="oe_structure"/>
                         <div class="row mt32 mb32">
                             <div>
-                                <h4 class="text-center"><strong>INFORME PATOLOGÍCO DEL PACIENTE</strong></h4>
+                                <h4 class="text-center"><strong>INFORME MÉDICO</strong></h4>
                             </div>
                         </div>
-                        <br/> <br/><br/>
+                        <br/> 
                         <div class="row">
                              <div class="col-xs-4">
                             	<div>
@@ -20,7 +20,7 @@
                             	</div>
                             	<br/>
                             	<div>
-                            		<strong>Fecha:</strong>
+                            		<strong>F/Filiación:</strong>
                                 	<span t-field="doc.report_date"/>
                                 </div>
                             </div>
@@ -57,13 +57,17 @@
               <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th>Patología</th>
+                        <th style="width: 15%;">Patología</th>
+                        <th style="width: 15%;">F/Informe</th>
+                        <th style="width: 15%;">F/Alta</th>
+                        <th style="width: 50%; margin-left: auto;">Informe medico</th>
+                        <!--
                         <th>Severidad</th>
                         <th>Estado</th>
                         <th>Activa</th>
                         <th>Infecciosa</th>
-                        <th>Diagnostico</th>
-                        <th>Observaciones</th>
+                           -->
+                        
                     </tr>
                </thead>
                <tbody class="sale_tbody">
@@ -72,6 +76,17 @@
                             <td>
                                <span t-field="l.pathology_id.name"/>
                             </td>
+                             <td>
+                               <span t-field="l.diagnosis_date"/>
+                            </td>
+                             <td>
+                               <span t-field="l.healed_date"/>
+                            </td>
+                             <td>
+                               <span t-field="l.short_comment"/>
+                            </td>
+                            
+                            <!--
                              <td>
                                <span t-field="l.disease_severity"/>
                             </td>
@@ -84,12 +99,8 @@
                              <td>
                                <span t-field="l.is_infectious"/>
                             </td>
-                             <td>
-                               <span t-field="l.diagnosis_date"/>
-                            </td>
-                             <td>
-                               <span t-field="l.short_comment"/>
-                            </td>
+                             -->
+                            
                         </tr>
                     </t>
                 </tbody>

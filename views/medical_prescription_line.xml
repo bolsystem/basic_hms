@@ -12,13 +12,14 @@
                     <field name="prnt" />
                     <field name="medicament_id" />
                     <field name="indication" />
-                    <field name="dose" />
-                    <field name="dose_unit_id" />
+                <!--    <field name="dose" /> 
+                    <field name="dose_unit_id" /> -->
                     <field name="form" />
+                    <!--
                     <field name="medication_dosage_id" />
                     <field name="quantity" />
-                    <field name="duration" />
-                    <field name="duration_period" />
+                    <field name="duration" /> 
+                    <field name="duration_period" /> -->
                     <field name="allow_substitution" />
                     <field name="short_comment" />
                 </tree>
@@ -39,7 +40,9 @@
                         <field name="route" />
                         <field name="start_treatment" />
                         <field name="end_treatment" />
+                        <field name="short_comment" />
                     </group>
+                    <!--
                     <group colspan="4" string="Dosificacion">
                         <group colspan="6" col="6">
                             <field name="dose" />
@@ -66,6 +69,7 @@
                         <field name="refills" />
                         <field name="short_comment" />
                     </group>
+                    -->
                 </form>
             </field>
         </record>

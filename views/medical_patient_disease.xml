@@ -44,15 +44,18 @@
             <field name="name">medical.patient.disease.tree.view</field>
             <field name="model">medical.patient.disease</field>
             <field name="arch" type="xml">
-                <tree string="Enfermedades">
+                <tree string="Informe médico">
                     <field name="pathology_id" />
+                    <!--
                     <field name="status" />
                     <field name="is_active" />
                     <field name="is_infectious" />
                     <field name="disease_severity" />
                     <field name="pregnancy_warning" />
+                    <field name="date_stop_treatment"/>
+                     -->
                     <field name="diagnosis_date" />
-                    <field name="date_stop_treatment" />
+                    <field name="healed_date"/>
                     <field name="short_comment" />
                 </tree>
             </field>

@@ -81,7 +81,7 @@
                                 </group>
                             </page>
                             
-                            <page string="Informe Médico/Patologíco">
+                            <page string="INFORME MÉDICO">
                                 <field name="patient_disease_ids"
                                     nolabel="1" widget="one2many_list" />
                             </page>
