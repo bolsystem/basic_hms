@@ -62,7 +62,7 @@
                             <field name="prescription_line_ids"
                                 nolabel="1" widget="one2many_list" />
                         </group>
-                        <group string="Notes">
+                        <group string="NOTAS">
                             <field name="notes" nolabel="1" />
                         </group>
                     </sheet>

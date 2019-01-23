@@ -7,8 +7,8 @@ from datetime import date,datetime
 class medical_prescription_order(models.Model):
     _name = "medical.prescription.order"
 
-    name = fields.Char('ID Prescripcion')
-    patient_id = fields.Many2one('medical.patient','ID Paciente')
+    name = fields.Char('# Pres.')
+    patient_id = fields.Many2one('medical.patient','Paciente')
     prescription_date = fields.Datetime('Fecha Prescripcion', default=fields.Datetime.now)
     user_id = fields.Many2one('res.users','Login User',readonly=True, default=lambda self: self.env.user)
     no_invoice = fields.Boolean('Excento de factura')
