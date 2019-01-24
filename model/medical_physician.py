@@ -9,7 +9,9 @@ class medical_physician(models.Model):
 
     partner_id = fields.Many2one('res.partner','Medico',required=True)
     institution_partner_id = fields.Many2one('res.partner',domain=[('is_institution','=',True)],string='Institucion')
-    speciality_id = fields.Many2one('medical.speciality','Especialidad',required=False)
-    code = fields.Char('Mat. - Colmed')
- #   code_esp = fields.Char('COD- ESPECIALIDAD')
+#   speciality_id = fields.Many2one('medical.speciality','Especialidad',required=False)
+    code = fields.Char('MAT. PROFESIONAL')
+    code_esp = fields.Char('REG. ESPECIALIDAD')
+    code_colmed = fields.Char('REG. COLMED SCZ')
+    nom_especialidad = fields.Char('NOMBRE DE ESPECIALIDAD')
     info = fields.Text('Informacion Extra')

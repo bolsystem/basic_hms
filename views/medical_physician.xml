@@ -14,7 +14,10 @@
                                 <field name="institution_partner_id"
                                     context="{'default_is_institution': 1, 'search_default_is_institution': 1}" />
                                 <field name="code" />
-                                <field name="speciality_id" />
+                                <field name="code_esp" />
+                                <field name="code_colmed" />
+                                <field name="nom_especialidad" />
+
                             </group>
                         </page>
                         <page string="Informacion extra">
@@ -34,7 +37,8 @@
                     <separator orientation="vertical" />
                     <field name="partner_id" select="1" />
                     <field name="code" select="1" />
-                    <field name="speciality_id" select="1" />
+                    <field name="code_esp" select="1" />
+                    <field name="code_colmed" select="1" />
                     <field name="institution_partner_id" select="1" />
                     <newline />
                     <filter string="Doctor" icon="terp-personal"
@@ -52,8 +56,9 @@
                 <tree string="Informacion del medico">
                     <field name="partner_id" />
                     <field name="code" />
-                    <field name="speciality_id" /> 
-                 <!--<field name="code_esp"/>-->
+                    <field name="code_esp" /> 
+                    <field name="code_colmed"/>
+                    <field name="nom_especialidad" />
                     <field name="institution_partner_id" />
                 </tree>
             </field>

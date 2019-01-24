@@ -8,16 +8,24 @@
                 <form string="Enfermedades">
                     <group colspan="4" col="4" string="Principal">
                         <field name="pathology_id" />
+                        <!--
                         <field name="disease_severity" />
                         <field name="status" />
+                        
                         <field name="is_infectious" />
                         <field name="is_active" />
-                        <field name="short_comment" />
+                         -->
                         <field name="diagnosis_date" />
                         <field name="healed_date" />
+                        <!--
                         <field name="age" />
+                    -->
                         <field name="doctor_id" />
                     </group>
+                    <group string="INFORME MÉDICO">
+                        <field name="short_comment" nolabel="1" />
+                    </group> 
+                    <!-- 
                     <group colspan="4" col="4" string="Alergias">
                         <field name="is_allergic" />
                         <field name="allergy_type" />
@@ -31,8 +39,9 @@
                         <field name="treatment_description" />
                         <field name="date_start_treatment" />
                         <field name="date_stop_treatment" />
-<!--                         <field name="medical_procedure_id" /> -->
+                        <field name="medical_procedure_id" /> 
                     </group>
+                    -->
                     <group string="Info extra">
                         <field name="extra_info" nolabel="1" />
                     </group>

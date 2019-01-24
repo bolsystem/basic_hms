@@ -17,7 +17,7 @@
 					<br/>
 					<div class="row mt32 mb32" id="informations">
 						<div class="col-xs-3">
-							<strong>ID Prescripcion :</strong>
+							<strong>Cod. :</strong>
 							<p t-field="doc.name"/>
 						</div>
 						<div class="col-xs-3">
@@ -180,8 +180,13 @@
 							<strong>Notas:</strong>
 							<span t-field="doc.notes"/>
 						</div>
-						<div class="text-right mb32">
-							<strong>Firma del doctor:</strong>
+						<div class="col-xs-12" style="text-align: center;">
+							<strong>---------------------------------</strong><br/>
+							<span t-field="doc.doctor_id.partner_id.name"/> <br/>
+							Mat. Prof. : <span t-field="doc.doctor_id.code"/> <br/>
+							<span t-field="doc.doctor_id.nom_especialidad"/> <br/>
+							Reg. ColMed: <span t-field="doc.doctor_id.code_colmed"/> <br/>
+							Reg. Espec.: <span t-field="doc.doctor_id.code_esp"/>
 						</div>
 					</div>
 				</div>
