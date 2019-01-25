@@ -5,7 +5,7 @@
             <field name="name">medical.pathology.category.form.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <form string="Categorias de Enfermedades">
+                <form string="Categorias de Patologías">
                     <group colspan="4" col="4">
                         <field name="name" />
                         <field name="active" />
@@ -19,7 +19,7 @@
             <field name="name">medical.pathology.category.tree.view</field>
             <field name="model">medical.pathology.category</field>
             <field name="arch" type="xml">
-                <tree string="Categorias de Enfermedades">
+                <tree string="Categorias de Patologías">
                     <field name="name" />
                 </tree>
             </field>
@@ -27,7 +27,7 @@
 
         <record id="action_medical_pathology_category_tree"
             model="ir.actions.act_window">
-            <field name="name">Estructura Categ/Enfermed.</field>
+            <field name="name">Estructura Categ/Patologia</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="view_type">tree</field>
@@ -36,14 +36,14 @@
 
         <record id="action_medical_pathology_category_form"
             model="ir.actions.act_window">
-            <field name="name">Categoria Enfermedades</field>
+            <field name="name">Categoria Patología</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">medical.pathology.category</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="menu_diseases" name="Enfermedades"
+        <menuitem id="menu_diseases" name="Patología"
             parent="main_menu_configartion" sequence='1' />
 
         <menuitem id="menu_categories" name="Categorias"

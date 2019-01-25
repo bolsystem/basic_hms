@@ -11,7 +11,7 @@
                     <field name="relative_partner_id" />
                 </field>
                 <notebook>
-                    <page string="Medico">
+                    <page string="Centro Medico">
                         <group colspan="6" col="6">
                             <field name="is_patient" />
                             <field name="is_doctor" />

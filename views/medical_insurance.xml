@@ -11,7 +11,7 @@
 				<tree string="Lista de seguros">
 				     <field name="number"/>
                     <field name="medical_insurance_partner_id"/>
-                    <field name="type"/>
+                    <field name="type" />
                     <field name="insurance_compnay_id" string="Compañia aseguradora"/>
                     <field name="category"/>
                     <field name="member_since"/>

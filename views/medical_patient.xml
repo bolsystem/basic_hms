@@ -52,7 +52,7 @@
                                     <group>
                                         <field name="blood_type" />
 <!--                                         <field name="medical_ethnicity_id" /> -->
-                                        <field name="current_insurance_id" string="Nro.Poliza"/>
+                                        <field name="current_insurance_id" string="Comp .Aseguradora"/>
                                         <field name="procedencia" placeholder="Ej.Montero,San Ignacio, Etc."/>
                                     </group>
                                     <group>
