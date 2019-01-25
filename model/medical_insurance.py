@@ -9,7 +9,7 @@ class medical_insurance(models.Model):
 
     number = fields.Char('Numero')
     medical_insurance_partner_id = fields.Many2one('res.partner','Propietario',required=True)
-    patient_id = fields.Many2one('res.partner', 'Propietario')
+    patient_id = fields.Many2one('res.partner', 'Pertenece a')
     type =  fields.Selection([('state','Estado'),('private','Privado'),('labour_union','Sindicato Laboral / Sindical')],'Tipo de seguro')
     member_since= fields.Date('Miembro desde')
     insurance_compnay_id = fields.Many2one('res.partner',domain=[('is_insurance_company','=',True)],string='Compañia aseguradora')

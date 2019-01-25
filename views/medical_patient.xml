@@ -31,7 +31,7 @@
                             <group>
                                 <field name="name" string="Nombre"/>
                                 <field name="date_of_birth" string="Fecha de nacimiento"/>
-                                <field name="marital_status" string="Estado marital"/>
+                                <field name="marital_status" string="Estado civil"/>
                             </group>
                             <group>
                                 <field name="sex" string="Sexo"/>
@@ -52,7 +52,7 @@
                                     <group>
                                         <field name="blood_type" />
 <!--                                         <field name="medical_ethnicity_id" /> -->
-                                        <field name="current_insurance_id" />
+                                        <field name="current_insurance_id" string="Nro.Poliza"/>
                                         <field name="procedencia" placeholder="Ej.Montero,San Ignacio, Etc."/>
                                     </group>
                                     <group>

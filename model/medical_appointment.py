@@ -26,7 +26,7 @@ class medical_appointment(models.Model):
             ('c', 'Emergencia medica'),
         ], 'Nivel de urgencia', sort=False,default="a")
     appointment_date = fields.Datetime('Fecha de consulta',required=True,default = fields.Datetime.now)
-    appointment_end = fields.Datetime('Fecha fin consulta',required=True)
+    appointment_end = fields.Datetime('Fecha fin consulta',required=False)
     doctor_id = fields.Many2one('medical.physician','Médico',required=True)
 #     speciality_id = fields.Many2one('medical.speciality','Speciality',required=True)
     no_invoice = fields.Boolean(string='Excento de facturacion',default=True)

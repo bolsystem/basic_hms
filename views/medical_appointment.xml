@@ -31,18 +31,20 @@
                                 <field name="doctor_id" />
 <!--                                 <field name="speciality_id" /> -->
                                 <field name="appointment_date" />
-                                <field name="appointment_end" />
-                                <field name="patient_status" />
+                          <!--      <field name="appointment_end" />  
+                                <field name="patient_status" />  -->
                                     <field name="no_invoice" />
                                     <field name="validity_status"
                                         readonly="1" />
-                                    <field name="appointment_validity_date" />
+                                    <field name="appointment_validity_date" string="F/Validación consulta"/>
                                 </group>
                             <group>
                                 <field name="institution_partner_id" />
+                                <!--
                                 <field name="inpatient_registration_id" />
                                 <field name="duration" />
                                 <field name="urgency_level" />
+                               -->
                                 <field name="invoice_to_insurer" />
                                 <field name="insurer_id"
                                     attrs="{'invisible': [('invoice_to_insurer','=', False)]}" />
@@ -50,7 +52,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Notas">
+                            <page string="Descripción">
                                 <group>
                                     <field name="comments"
                                         nolabel="1" class="oe_inline"/>

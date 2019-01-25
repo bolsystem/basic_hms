@@ -6,15 +6,13 @@
 				<div class="page">
 					<div class="oe_structure"/>
 					  <br/>
-<br/>
-<br/>
-<br/>
+
 							<div class="row">
 							<h3 class="text-center mb32">
-								<strong>PRESCRIPCION</strong>
+								<strong>PRESCRIPCIÓN</strong>
 							</h3>
 					</div>
-					<br/>
+					
 					<div class="row mt32 mb32" id="informations">
 						<div class="col-xs-3">
 							<strong>Cod. :</strong>
@@ -98,7 +96,7 @@
 									</tr>
 									<tr t-if="test.indication">
 										<td>
-											<strong>Indicaciones</strong>
+											<strong>Indicaciones - Rp/ </strong>
 										</td>
 										<td>
 											<span t-field="test.indication"/>
@@ -183,8 +181,8 @@
 						<div class="col-xs-12" style="text-align: center;">
 							<strong>---------------------------------</strong><br/>
 							<span t-field="doc.doctor_id.partner_id.name"/> <br/>
+							Médico - <span t-field="doc.doctor_id.nom_especialidad"/> <br/>
 							Mat. Prof. : <span t-field="doc.doctor_id.code"/> <br/>
-							<span t-field="doc.doctor_id.nom_especialidad"/> <br/>
 							Reg. ColMed: <span t-field="doc.doctor_id.code_colmed"/> <br/>
 							Reg. Espec.: <span t-field="doc.doctor_id.code_esp"/>
 						</div>
