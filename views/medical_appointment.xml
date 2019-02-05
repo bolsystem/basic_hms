@@ -45,14 +45,15 @@
                                 <field name="duration" />
                                 <field name="urgency_level" />
                                -->
-                                <field name="invoice_to_insurer" />
+                                <field name="patient_status"/>
+                                <field name="invoice_to_insurer" string="¿Es paciente externo?, Elija una Poliza"/>
                                 <field name="insurer_id"
                                     attrs="{'invisible': [('invoice_to_insurer','=', False)]}" />
                                 <field name="consultations_id" />
                             </group>
                         </group>
                         <notebook>
-                            <page string="Descripción">
+                            <page string="Notas">
                                 <group>
                                     <field name="comments"
                                         nolabel="1" class="oe_inline"/>

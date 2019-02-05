@@ -15,10 +15,10 @@ class medical_appointment(models.Model):
     institution_partner_id = fields.Many2one('res.partner',domain=[('is_institution','=',True)],string="Centro Médico")
     inpatient_registration_id = fields.Many2one('medical.inpatient.registration',string="Registro de pacientes hospitalizados")
     patient_status = fields.Selection([
-            ('ambulatory', 'Ambulatorio'),
+            ('ambulatory', 'ocacional'),
             ('outpatient', 'Paciente externo'),
             ('inpatient', 'Paciente interno'),
-        ], 'Estado del paciente', sort=False,default='outpatient')
+        ], 'Tipo de paciente', sort=False,default='inpatient')
     patient_id = fields.Many2one('medical.patient','Paciente',required=True)
     urgency_level = fields.Selection([
             ('a', 'Normal'),
@@ -38,10 +38,10 @@ class medical_appointment(models.Model):
     consultations_id = fields.Many2one('product.product','Servicio de consulta',required=True)
     comments = fields.Text(string="Info")
     state = fields.Selection([('draft','Borrador'),('confirmed','Confirmada'),('cancel','Anulada'),('done','Hecha')],string="Estado",default='draft')
-    invoice_to_insurer = fields.Boolean('Factura por seguro')
+    invoice_to_insurer = fields.Boolean('¿Es paciente externo?</br> Elije una Poliza')
     medical_patient_psc_ids = fields.Many2many('medical.patient.psc',string='Lista de síntomas de pediatría')
     medical_prescription_order_ids = fields.One2many('medical.prescription.order','appointment_id',string='Prescripcion')
-    insurer_id = fields.Many2one('medical.insurance','Asegurador')
+    insurer_id = fields.Many2one('medical.insurance','Póliza')
     duration = fields.Integer('Duración')
     #owner_name = fields.Many2one('res.partner','Owner')
 

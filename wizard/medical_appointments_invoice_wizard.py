@@ -21,7 +21,7 @@ class medical_appointments_invoice_wizard(models.TransientModel):
             if lab_req.no_invoice == False:
                 sale_journals = self.env['account.journal'].search([('type','=','sale')])
                 invoice_vals = {
-                'name': "Customer Invoice",
+                'name': "CxC cliente",
                 'origin': lab_req.name or '',
                 'type': 'out_invoice',
                 'reference': False,
@@ -33,7 +33,7 @@ class medical_appointments_invoice_wizard(models.TransientModel):
                 'payment_term_id': False,
                 'fiscal_position_id': lab_req.patient_id.patient_id.property_account_position_id.id,
                 'team_id': False,
-                'comment': "Esta factura fue creada con -- Centro Medico --",
+                'comment': "Esta CxC fue creada con -- Centro Medico --",
                 'date_invoice': date.today(),
                 'company_id':lab_req.patient_id.patient_id.company_id.id or False ,
                 }
@@ -84,7 +84,7 @@ class medical_appointments_invoice_wizard(models.TransientModel):
                         if list_of_ids:
                             result['domain'] = "[('id','in',%s)]" % list_of_ids
             else:
-                raise UserError(_(' La consulta esta exenta de facturacion   '))
+                raise UserError(_(' La consulta esta exenta de Cobro   '))
             return result
 
 
