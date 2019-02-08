@@ -5,46 +5,46 @@
             <t t-call="web.external_layout">
                 <t t-set="doc" t-value="doc.with_context({'lang':doc.doctor_id.partner_id.lang})"/>
                  <!--<t t-foreach="docs" t-as="doc" >-->
-                    <div class="page">
+                    <div class="page" style="font-size:13px">
                         <div class="oe_structure"/>
-                        
+                            <br/>
                             <div class="row">
                                 <div>
-                                    <h3 class="text-center"><strong>CONSULTA</strong></h3>
+                                    <h4 class="text-center"><strong>CONSULTA</strong></h4>
                                 </div>
                             </div>
-                            <br/><br/><br/>
+                            <br/>
                             <div class="row mt32 mb32" id="informations">
                               <div>
                                     <table>
                                     <tbody class="sale_tbody">
 
                                       <tr>
-                                                <td width="10%">
-                                                    <strong>COD. CONSULTA:</strong>
+                                                <td width="5%" class="text-left">
+                                                    <strong>Id/Cons.:</strong>
                                                 </td>
 
                                                  <td width="5%">
                                                     <span t-field=" doc.name"/>
                                                 </td>
 
-                                                <td width="10%">
+                                                <td width="5%">
                                                 </td>
 
                                                 <td width="5%">
                                                  <strong> Fecha:</strong>
                                                 </td>
 
-                                                <td width="5%">
+                                                <td width="15%" style="font-size:12 px">
                                                   <span t-field="doc.appointment_date"/>
                                                 </td>
                                         </tr>
                                         <tr>
-                                                <td width="10%">
+                                                <td width="5%" class="text-left">
                                                     <strong>Paciente:</strong>
                                                 </td>
 
-                                                <td width="5%" class="text-left">
+                                                <td width="15%" class="text-left">
                                                     <span t-field="doc.patient_id.patient_id.name"/>
                                                 </td>
 
@@ -56,7 +56,7 @@
                                           </tr>
 
                                           <tr>
-                                                <td width="10%">
+                                                <td width="5%" class="text-left">
                                                     <strong>Nro. Poliza:</strong>
                                                 </td>
 
@@ -68,24 +68,24 @@
                                                 </td>
 
                                                 <td width="10%">
-                                                   <strong>Consulta:</strong>
+                                                   <strong>Servicio:</strong>
                                                 </td>
 
-                                                <td width="10%" class="text-left">
+                                                <td width="10%" class="text-left" style="font-size:11 px">
                                                     <span t-field="doc.consultations_id"/>
                                                 </td>
                                                
                                           </tr>
 
                                           <tr>
-                                                <td width="10%">
+                                                <td width="5%" class="text-left">
                                                    <strong>Motivo de Consulta :</strong>
                                                 </td>
                                                  <td width="5%">
                                                     <span t-field="doc.comments"/>
                                                 </td>
 
-                                                <td width="10%">
+                                                <td width="15%">
                                                 </td>
                                                 <td width="10%">
                                                  <strong> Insitucion :   </strong>
@@ -118,7 +118,7 @@
 <!--                                                    <span t-field="doc.speciality_id.name"/> -->
 <!--                                                 </td> -->
                                           </tr>
-
+                                          <!--
                                           <tr>
                                                 <td width="10%">
 
@@ -137,13 +137,33 @@
                                                    <span t-field="doc.doctor_id.partner_id.name"/>
                                                 </td>
                                           </tr>
+                                           -->
 
                                     </tbody>
 
                                 </table>
+
                               </div>
+
                             </div>
-                        </div>
+                            <br>
+                               <br>
+                                   <br>
+                                       <br/>
+                                   </br>
+                               </br>
+                            </br>
+                            <br/>
+                            <br/><br/>
+                            <div class="col-xs-12" style="text-align: center; font-size:12px">
+                              <strong>---------------------------------</strong><br/>
+                              <span t-field="doc.doctor_id.partner_id.name"/> <br/>
+                               Médico - <span t-field="doc.doctor_id.nom_especialidad"/> <br/>
+                               Mat. Prof. : <span t-field="doc.doctor_id.code"/> <br/>
+                               Reg. ColMed: <span t-field="doc.doctor_id.code_colmed"/> <br/>
+                               Reg. Espec.: <span t-field="doc.doctor_id.code_esp"/>
+                             </div>
+                            </div>
                 </t>
         </template>
         <template id="appointment_recipts_report">

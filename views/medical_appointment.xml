@@ -53,7 +53,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Notas">
+                            <page string="MOTIVO DE LA COSULTA">
                                 <group>
                                     <field name="comments"
                                         nolabel="1" class="oe_inline"/>

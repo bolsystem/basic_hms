@@ -6,6 +6,7 @@
     			<t t-set="doc" t-value="doc.with_context({'lang':doc.patient_id.lang})"/>
                     <div class="page">
                         <div class="oe_structure"/>
+                        <br/> 
                         <div class="row mt32 mb32">
                             <div>
                                 <h4 class="text-center"><strong>INFORME MÉDICO</strong></h4>

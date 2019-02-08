@@ -8,33 +8,33 @@
 					  <br/>
 
 							<div class="row">
-							<h3 class="text-center mb32">
+							<h4 class="text-center mb32">
 								<strong>PRESCRIPCIÓN</strong>
-							</h3>
+							</h4>
 					</div>
 					
-					<div class="row mt32 mb32" id="informations">
+					<div class="row mt32 mb32" id="informations" style="text-align:center;font-size:11px">
 						<div class="col-xs-3">
 							<strong>Cod. :</strong>
 							<p t-field="doc.name"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Fecha de prescripcion:</strong>
+							<strong>F/ de prescripcion:</strong>
 							<p t-field="doc.prescription_date"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Doctor que prescribe:</strong>
+							<strong>Dr. que prescribe:</strong>
 							<p t-field="doc.doctor_id.partner_id.name"/>
 						</div>
 						<div class="col-xs-3">
-							<strong>Datos del paciente:</strong>
+							<strong>Nombre paciente:</strong>
 							<p t-field="doc.patient_id"/>
 							<p t-field="doc.patient_id.id"/>
 							<p t-field="doc.patient_id.patient_id.email"/>
 						</div>
 					</div>
 					<br>
-						<br/>
+						
 					</br>
 					<div>
 						<table class="table table-condensed">
@@ -154,6 +154,7 @@
 											<span t-field="test.refills"/>
 										</td>
 									</tr>
+									
 									<tr t-if="test.short_comment">
 										<td>
 											<strong>Notas</strong>
@@ -162,6 +163,7 @@
 											<span t-field="test.short_comment"/>
 										</td>
 									</tr>
+								     
 								</t>
 							</tbody>
 						</table>
@@ -174,10 +176,12 @@
 						</br>
 					</br>
 					<div class="row mt32 mb32" id="informations">
+						<!--
 						<div class="col-xs-3">
 							<strong>Notas:</strong>
 							<span t-field="doc.notes"/>
 						</div>
+					      -->
 						<div class="col-xs-12" style="text-align: center;">
 							<strong>---------------------------------</strong><br/>
 							<span t-field="doc.doctor_id.partner_id.name"/> <br/>
