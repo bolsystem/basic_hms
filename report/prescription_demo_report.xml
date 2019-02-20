@@ -182,7 +182,7 @@
 							<span t-field="doc.notes"/>
 						</div>
 					      -->
-						<div class="col-xs-12" style="text-align: center;">
+					   <div class="col-xs-12" style="text-align:center;font-size:12px">
 							<strong>---------------------------------</strong><br/>
 							<span t-field="doc.doctor_id.partner_id.name"/> <br/>
 							Médico - <span t-field="doc.doctor_id.nom_especialidad"/> <br/>

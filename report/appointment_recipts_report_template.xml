@@ -154,7 +154,7 @@
                                </br>
                             </br>
                             <br/>
-                            <br/><br/>
+                            <br/><br/><br/>
                             <div class="col-xs-12" style="text-align: center; font-size:12px">
                               <strong>---------------------------------</strong><br/>
                               <span t-field="doc.doctor_id.partner_id.name"/> <br/>

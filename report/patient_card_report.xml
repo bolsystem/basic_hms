@@ -20,7 +20,7 @@
 													<span t-field='o.name' />
 												</b>
 												<br></br>
-												<b>Titulo:</b>
+												<b>Ocupación:</b>
 												<span t-field='o.patient_id.title' />
 												<br></br>
 												<b>Nombre:</b>
